@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:layout_margin = "10dp"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_margin = "20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_width = "match_parent"
+    android:layout_height="wrap_content">
 
     <TextView
-        android:id = "@+id/title"
-        android:layout_margin="8dp"
+        android:id = "@+id/name"
+        android:textSize = "32dp"
+        android:layout_marginLeft="8dp"
+        android:textStyle= "bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "title"/>
+        android:text = "Name"/>
 
     <TextView
         android:id = "@+id/telephone"
@@ -21,36 +24,38 @@
 
     <TextView
         android:id = "@+id/url"
-        android:layout_margin="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text = "website"/>
 
     <LinearLayout
+        android:layout_marginTop="8dp"
         android:layout_height="wrap_content"
         android:layout_width = "match_parent"
-        android:orientation="horizontal"
-        />
+        android:orientation="horizontal">
 
         <TextView
             android:id = "@+id/address"
-            android:layout_margin="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "address"/>
+            android:text = "address"
+            android:layout_marginLeft="8dp"/>
 
         <TextView
             android:id = "@+id/city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight = "8dp"
             android:text = "city"/>
 
         <TextView
             android:id = "@+id/zipcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
             android:text = "zipcode"/>
+
+    </LinearLayout>
 
 </LinearLayout>
