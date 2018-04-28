@@ -43,7 +43,7 @@ public class Beaches {
 
     @SerializedName("Boardwalk")
     private String boardwalk;
-
+    //from here
     @SerializedName("Concession_Stand")
     private String concessionStand;
 
@@ -55,6 +55,7 @@ public class Beaches {
 
     @SerializedName("Directions")
     private String directions;
+    //to here don't include
 
     @SerializedName("lat")
     private String lat;
