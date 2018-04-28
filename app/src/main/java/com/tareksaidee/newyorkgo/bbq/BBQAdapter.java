@@ -30,13 +30,15 @@ public class BBQAdapter extends RecyclerView.Adapter<BBQAdapter.BBQViewHolder> {
 
     @Override
     public BBQAdapter.BBQViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.message_item, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.bbq_card, parent, false);
         return new BBQViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(BBQAdapter.BBQViewHolder holder, int position) {
-
+        BBQ bbq = bbqs.get(position);
+        holder.location.setText(bbq.getLocation());
+        holder.name.setText(bbq.getName());
     }
 
     @Override
@@ -50,17 +52,13 @@ public class BBQAdapter extends RecyclerView.Adapter<BBQAdapter.BBQViewHolder> {
 
     class BBQViewHolder extends RecyclerView.ViewHolder {
 
-        TextView userName;
-        TextView messageText;
-        PhotoView photoImageView;
-        RoundedImageView userImage;
+        TextView name;
+        TextView location;
 
         BBQViewHolder(View view) {
             super(view);
-            userName = (TextView) view.findViewById(R.id.nameTextView);
-            messageText = (TextView) view.findViewById(R.id.messageTextView);
-            photoImageView = (PhotoView) view.findViewById(R.id.photoImageView);
-            userImage = (RoundedImageView) view.findViewById(R.id.user_image);
+            name = (TextView) view.findViewById(R.id.name);
+            location = (TextView) view.findViewById(R.id.location);
         }
     }
 
