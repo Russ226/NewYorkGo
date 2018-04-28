@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin = "10dp"
-    android:padding="10dp">
+    android:background="@drawable/cardview_drawable">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width = "0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="95">
+        android:padding="10dp"
+        android:layout_weight="97">
 
         <TextView
             android:id = "@+id/name"
@@ -18,8 +20,7 @@
             android:textStyle= "bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Name"
-            android:gravity=""/>
+            android:text = "Name"/>
 
         <TextView
             android:id = "@+id/phone"
@@ -37,7 +38,7 @@
             android:id = "@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Address:"
+            android:text = "Address:"/>
 
         <TextView
             android:id = "@+id/city"
@@ -54,11 +55,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/colorBar"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="5"
+        android:layout_weight="3"
         android:layout_gravity="end"
-        android:background="#444444"">
+        android:background="#444444">
     </LinearLayout>
 
 </LinearLayout>
