@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:id = "@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="32dp"
+        android:text = "Name"
+        />
+
+    <TextView
+        android:id = "@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Address"
+        />
+
+    <TextView
+        android:id = "@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Note"
+        />
+
+    <TextView
+        android:id = "@+id/dogrun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Dog Runs"
+        />
+
+    <TextView
+        android:id = "@+id/accessible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Accessible"
+        />
+
+    <TextView
+        android:id = "@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Notes"
+        />
+
+
+</LinearLayout>
