@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id = "@+id/name"
+        android:textSize="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Name"
+        />
+
+    <TextView
+        android:id = "@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Location"
+        />
+
+    <TextView
+        android:id = "@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Phone"
+        />
+
+    <TextView
+        android:id = "@+id/surf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Surf"
+        />
+
+    <TextView
+        android:id = "@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Note"
+        />
+
+    <TextView
+        android:id = "@+id/accessiblenotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Accessible Notes"
+        />
+
+    <TextView
+        android:id = "@+id/barbecueAllowed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Barbecue Allowed"
+        />
+
+    <TextView
+        android:id = "@+id/Bathroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Bathroom"
+        />
+
+    <TextView
+        android:id = "@+id/bicycleAndSkathPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Bicycle and Skath Path"
+        />
+
+    <TextView
+        android:id = "@+id/boardwalk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Boardwalk"
+        />
+
+    <TextView
+        android:id = "@+id/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Latitude"
+        />
+
+    <TextView
+        android:id = "@+id/lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "longitude"
+        />
+
+    <TextView
+        android:id = "@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Description"
+        />
+
+</LinearLayout>
