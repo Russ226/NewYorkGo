@@ -12,7 +12,7 @@
         android:layout_width = "0dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:layout_weight="97">
+        android:layout_weight="95">
 
         <TextView
             android:id = "@+id/name"
@@ -58,7 +58,7 @@
         android:id="@+id/colorBar"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3"
+        android:layout_weight="5"
         android:layout_gravity="end"
         android:background="#444444">
     </LinearLayout>

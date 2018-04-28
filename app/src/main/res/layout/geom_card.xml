@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin = "10dp"
+    android:background="@drawable/cardview_drawable">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width = "0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_weight="95">
+
+        <TextView
+            android:id = "@+id/name"
+            android:textSize = "32dp"
+            android:textStyle= "bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Name"/>
+
+        <TextView
+            android:id = "@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Location:"/>
+
+        <TextView
+            android:id = "@+id/courts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Number of Courts:"/>
+
+        <TextView
+            android:id = "@+id/accessible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Wheel Accessible:"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/colorBar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:layout_gravity="end"
+        android:background="#444444">
+    </LinearLayout>
+
+</LinearLayout>

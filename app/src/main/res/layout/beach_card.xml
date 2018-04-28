@@ -1,113 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_margin = "10dp"
+    android:background="@drawable/cardview_drawable">
 
-    <TextView
-        android:id = "@+id/name"
-        android:textSize="32dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width = "0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Name"
-        />
+        android:padding="10dp"
+        android:layout_weight="95">
 
-    <TextView
-        android:id = "@+id/location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Location"
-        />
+        <TextView
+            android:id = "@+id/name"
+            android:textSize = "32dp"
+            android:textStyle= "bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Name"/>
 
-    <TextView
-        android:id = "@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Phone"
-        />
+        <TextView
+            android:id = "@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Location:"/>
 
-    <TextView
-        android:id = "@+id/surf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Surf"
-        />
+        <TextView
+            android:id = "@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Phone Number::"/>
 
-    <TextView
-        android:id = "@+id/note"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Note"
-        />
+        <TextView
+            android:id = "@+id/surf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Surf:"/>
 
-    <TextView
-        android:id = "@+id/accessiblenotes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Accessible Notes"
-        />
+        <TextView
+            android:id = "@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Note:"/>
 
-    <TextView
-        android:id = "@+id/barbecueAllowed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Barbecue Allowed"
-        />
+        <TextView
+            android:id = "@+id/accessible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Wheelchair Accessible:"/>
 
-    <TextView
-        android:id = "@+id/Bathroom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Bathroom"
-        />
+        <TextView
+            android:id="@+id/accessibleNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accessible Notes:"/>
 
-    <TextView
-        android:id = "@+id/bicycleAndSkathPath"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Bicycle and Skath Path"
-        />
+        <TextView
+            android:id = "@+id/bbqOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "BBQ Allowed:"/>
 
-    <TextView
-        android:id = "@+id/boardwalk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Boardwalk"
-        />
+        <TextView
+            android:id = "@+id/bathroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Bathroom:"/>
 
-    <TextView
-        android:id = "@+id/lat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Latitude"
-        />
+        <TextView
+            android:id = "@+id/bikeAndSkate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Bicycle and Skate Path:"/>
 
-    <TextView
-        android:id = "@+id/lon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "longitude"
-        />
+        <TextView
+            android:id = "@+id/boardwalk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Boardwalk:"/>
 
-    <TextView
-        android:id = "@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Description"
-        />
+        <TextView
+            android:id = "@+id/concession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Concession Stand:"/>
+
+        <TextView
+            android:id = "@+id/performance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Performance Pavilion:"/>
+
+        <TextView
+            android:id = "@+id/charging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Charging Station:"/>
+
+        <TextView
+            android:id = "@+id/directions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Directions:"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/colorBar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:layout_gravity="end"
+        android:background="#444444">
+    </LinearLayout>
 
 </LinearLayout>

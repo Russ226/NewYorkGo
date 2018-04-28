@@ -1,91 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-    <TextView
-        android:id = "@+id/name"
-        android:textSize="32dp"
-        android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin = "10dp"
+    android:background="@drawable/cardview_drawable">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width = "0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Name"
-        />
+        android:padding="10dp"
+        android:layout_weight="95">
 
-    <TextView
-        android:id = "@+id/location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Location"
-        />
+        <TextView
+            android:id = "@+id/name"
+            android:textSize = "32dp"
+            android:textStyle= "bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Name"/>
 
-    <TextView
-        android:id = "@+id/parkID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Park ID"
-        />
+        <TextView
+            android:id = "@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Location:"/>
 
-    <TextView
-        android:id = "@+id/startDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Start Date "
-        />
+        <TextView
+            android:id = "@+id/parkID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Park ID:"/>
 
-    <TextView
-        android:id = "@+id/endDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "End Date"
-        />
+        <TextView
+            android:id = "@+id/startDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Start Date:"/>
 
-    <TextView
-        android:id = "@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Description"
-        />
+        <TextView
+            android:id = "@+id/endDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "End Date:"/>
 
-    <TextView
-        android:id = "@+id/permitNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Permit Number"
-        />
+        <TextView
+            android:id = "@+id/Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Description:"/>
 
-    <TextView
-        android:id = "@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Phone"
-        />
+        <TextView
+            android:id = "@+id/permitNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Permit Number:"/>
 
-    <TextView
-        android:id = "@+id/website"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Website"
-        />
+        <TextView
+            android:id = "@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Phone Number:"/>
 
-    <TextView
-        android:id = "@+id/typeName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Type Name"
-        />
+        <TextView
+            android:id = "@+id/website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Website:"/>
 
+        <TextView
+            android:id = "@+id/typeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Type Name:"/>
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/colorBar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:layout_gravity="end"
+        android:background="#444444">
+    </LinearLayout>
 
 </LinearLayout>
