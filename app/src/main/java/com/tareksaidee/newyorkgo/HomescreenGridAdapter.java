@@ -1,6 +1,7 @@
 package com.tareksaidee.newyorkgo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,11 +9,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.tareksaidee.newyorkgo.bbq.BBQActivity;
+
 /**
  * Created by tarek on 4/27/2018.
  */
 
-public class HomescreenGridAdapter extends BaseAdapter {
+public class HomescreenGridAdapter extends BaseAdapter{
 
 
 
@@ -44,9 +47,16 @@ public class HomescreenGridAdapter extends BaseAdapter {
             view = layoutInflater.inflate(R.layout.homescreen_grid_item, null);
         }
         ImageButton imageButton = view.findViewById(R.id.grid_item_image);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mContext.startActivity(new Intent(mContext, BBQActivity.class));
+            }
+        });
         TextView textView = view.findViewById(R.id.grid_image_text);
         imageButton.setBackgroundResource(R.drawable.nature);
         textView.setText("Ssadsada");
         return view;
     }
+
 }
