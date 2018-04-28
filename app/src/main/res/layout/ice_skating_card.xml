@@ -1,6 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id = "@+id/name"
+        android:textSize="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Name"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id = "@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Location"
+        />
+
+    <TextView
+        android:id = "@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Phone"
+        />
+
+    <TextView
+        android:id = "@+id/access"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Accessible"
+        />
+
+    <TextView
+        android:id = "@+id/iceSkate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Ice Skating Type"
+        />
+
+    <TextView
+        android:id = "@+id/adult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Public Skate Admission Price Adult"
+        />
+
+    <TextView
+        android:id = "@+id/child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Public Skate Admission Price Child"
+        />
+
+    <TextView
+        android:id = "@+id/senior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Public Skate Admission Price Senior"
+        />
+
+    <TextView
+        android:id = "@+id/open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Opening Date"
+        />
+    <TextView
+        android:id = "@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Close Date"
+        />
+
+    <TextView
+        android:id = "@+id/iceSkate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Ice Skating Type"
+        />
+
+    <TextView
+        android:id = "@+id/sun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Sunday Public Skating Hours"
+        />
+
+    <TextView
+        android:id = "@+id/mon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Monday Public Skating Hours"
+        />
+    <TextView
+        android:id = "@+id/tues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Tuesday Public Skating Hours"
+        />
+    <TextView
+        android:id = "@+id/wed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Wednesday Public Skating Hours"
+        />
+    <TextView
+        android:id = "@+id/thur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Thursday Public Skating Hours"
+        />
+    <TextView
+        android:id = "@+id/fri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Friday Public Skating Hours"
+        />
+    <TextView
+        android:id = "@+id/sat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Saturday Public Skating Hours"
+        />
+    <TextView
+        android:id = "@+id/hol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text = "Holiday Public Skating Hours"
+        />
+
+</LinearLayout>
