@@ -30,8 +30,8 @@
     <Button
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_margin="2dp"
-        android:background="#01579B"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_button"
         android:onClick="handleButtons"
         android:text="Temp Button 1"
         android:textColor="#FAFAFA" />
@@ -39,16 +39,16 @@
     <Button
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_margin="2dp"
-        android:background="#01579B"
+        android:layout_marginBottom="10dp"
+        android:background = "@drawable/round_button"
         android:text="Temp Button 2"
         android:textColor="#FAFAFA" />
 
     <Button
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_margin="2dp"
-        android:background="#01579B"
+        android:layout_marginBottom="10dp"
+        android:background = "@drawable/round_button"
         android:text="Temp Button 3"
         android:textColor="#FAFAFA" />
 
