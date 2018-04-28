@@ -29,6 +29,7 @@
         android:layout_height="50dp"
         android:text = "Temporary Button 1"
         android:gravity="center"
+        android:onClick="handleButtons"
         />
     <Button
         android:layout_width="wrap_content"

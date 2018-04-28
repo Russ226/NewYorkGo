@@ -10,10 +10,10 @@ import android.widget.Toast;
 public class HomescreenGridView extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_screen);
 
         GridView gridview = (GridView) findViewById(R.id.gridView);
-        //gridview.setAdapter(new ImageAdapter(this));
+        gridview.setAdapter(new HomescreenGridAdapter(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Toast.makeText(HomescreenGridView.this, "" + position, Toast.LENGTH_SHORT).show();
