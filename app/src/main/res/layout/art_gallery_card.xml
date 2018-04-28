@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_margin = "10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id = "@+id/title"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "title"/>
+
+    <TextView
+        android:id = "@+id/telephone"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "telephone number"/>
+
+    <TextView
+        android:id = "@+id/url"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "website"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width = "match_parent"
+        android:orientation="horizontal"
+        />
+
+        <TextView
+            android:id = "@+id/address"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "address"/>
+
+        <TextView
+            android:id = "@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text = "city"/>
+
+        <TextView
+            android:id = "@+id/zipcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text = "zipcode"/>
+
+</LinearLayout>
