@@ -1,21 +1,18 @@
 package com.tareksaidee.newyorkgo.bball;
 
-import android.content.Context;
-import android.support.annotation.NonNull;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.util.Log;
 
 import com.tareksaidee.newyorkgo.DTO.BasketballCourt;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
-
 import java.util.ArrayList;
 
-public class BasketballCourtActivity {
+public class BasketballCourtActivity extends AppCompatActivity {
 
     private ArrayList<BasketballCourt> bball;
     private RecyclerView bballView;

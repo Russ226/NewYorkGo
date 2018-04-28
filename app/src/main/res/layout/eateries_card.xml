@@ -1,80 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/wrapper"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin = "10dp"
+    android:layout_margin="10dp"
     android:background="@drawable/cardview_drawable">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width = "0dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_weight="95">
+        android:layout_weight="95"
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
-            android:id = "@+id/name"
-            android:textSize = "32dp"
-            android:textStyle= "bold"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Name"/>
+            android:text="Name"
+            android:textSize="32dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id = "@+id/location"
+            android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Location:"/>
+            android:text="Location:" />
 
         <TextView
-            android:id = "@+id/parkID"
+            android:id="@+id/parkID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Park ID:"/>
+            android:text="Park ID:" />
 
         <TextView
-            android:id = "@+id/startDate"
+            android:id="@+id/startDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Start Date:"/>
+            android:text="Start Date:" />
 
         <TextView
-            android:id = "@+id/endDate"
+            android:id="@+id/endDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "End Date:"/>
+            android:text="End Date:" />
 
         <TextView
-            android:id = "@+id/Description"
+            android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Description:"/>
+            android:text="Description:" />
 
         <TextView
-            android:id = "@+id/permitNum"
+            android:id="@+id/permitNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Permit Number:"/>
+            android:text="Permit Number:" />
 
         <TextView
-            android:id = "@+id/phone"
+            android:id="@+id/phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Phone Number:"/>
+            android:text="Phone Number:" />
 
         <TextView
-            android:id = "@+id/website"
+            android:id="@+id/website"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Website:"/>
+            android:text="Website:" />
 
         <TextView
-            android:id = "@+id/typeName"
+            android:id="@+id/typeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text = "Type Name:"/>
+            android:text="Type Name:" />
 
     </LinearLayout>
 
@@ -82,9 +81,9 @@
         android:id="@+id/colorBar"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="5"
         android:layout_gravity="end"
-        android:background="#444444">
-    </LinearLayout>
+        android:layout_weight="5"
+        android:background="#444444"
+        android:orientation="horizontal" />
 
 </LinearLayout>

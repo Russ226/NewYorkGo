@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.tareksaidee.newyorkgo.DTO.Eateries;
+import com.tareksaidee.newyorkgo.R;
 
 import java.util.ArrayList;
 
@@ -65,7 +66,7 @@ public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.Eateri
             startDate = (TextView) view.findViewById(R.id.startDate);
             endDate = (TextView) view.findViewById(R.id.endDate);
             description = (TextView) view.findViewById(R.id.description);
-            permitNumber = (TextView) view.findViewById(R.id.permitNumber);
+            permitNumber = (TextView) view.findViewById(R.id.permitNum);
             phone = (TextView) view.findViewById(R.id.phone);
             website = (TextView) view.findViewById(R.id.website);
             typeName = (TextView) view.findViewById(R.id.typeName);

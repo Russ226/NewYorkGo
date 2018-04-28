@@ -30,7 +30,7 @@ public class BasketballCourtAdapter extends RecyclerView.Adapter<BasketballCourt
 
     @Override
     public BasketballCourtAdapter.BasketballCourtViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.bbq_card, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.basketball_court_card, parent, false);
         return new BasketballCourtViewHolder(view);
     }
 
@@ -65,7 +65,7 @@ public class BasketballCourtAdapter extends RecyclerView.Adapter<BasketballCourt
             super(view);
             name = (TextView) view.findViewById(R.id.name);
             address = (TextView) view.findViewById(R.id.location);
-            numCourts = (TextView) view.findViewById(R.id.numOfCourts);
+            numCourts = (TextView) view.findViewById(R.id.courts);
             wheelchairAccess = (TextView) view.findViewById(R.id.accessible);
 
         }

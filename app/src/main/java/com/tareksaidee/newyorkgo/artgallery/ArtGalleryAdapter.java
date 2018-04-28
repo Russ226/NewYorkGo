@@ -66,11 +66,11 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
         ArtGalleryViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
-            telephone = (TextView) view.findViewById(R.id.telephone);
+            telephone = (TextView) view.findViewById(R.id.phone);
             url = (TextView) view.findViewById(R.id.url);
             address = (TextView) view.findViewById(R.id.address);
             city = (TextView) view.findViewById(R.id.city);
-            zipcode = (TextView) view.findViewById(R.id.zipcode);
+            zipcode = (TextView) view.findViewById(R.id.zip);
         }
     }
 

@@ -83,10 +83,10 @@ public class BeachesAdapter extends RecyclerView.Adapter<BeachesAdapter.BeachesV
             surf = (TextView) view.findViewById(R.id.surf);
             note = (TextView) view.findViewById(R.id.note);
             accessible = (TextView) view.findViewById(R.id.accessible);
-            accesibleNote = (TextView) view.findViewById(R.id.accessiblenotes);
-            barbecue = (TextView) view.findViewById(R.id.barbecueAllowed);
-            bathroom = (TextView) view.findViewById(R.id.Bathroom);
-            bikeSkate = (TextView) view.findViewById(R.id.bicycleAndSkathPath);
+            accesibleNote = (TextView) view.findViewById(R.id.accessibleNotes);
+            barbecue = (TextView) view.findViewById(R.id.bbqOK);
+            bathroom = (TextView) view.findViewById(R.id.bathroom);
+            bikeSkate = (TextView) view.findViewById(R.id.bikeAndSkate);
             boardWalk = (TextView) view.findViewById(R.id.boardwalk);
             longitude = (TextView) view.findViewById(R.id.lon);
             latitutde = (TextView) view.findViewById(R.id.lat);

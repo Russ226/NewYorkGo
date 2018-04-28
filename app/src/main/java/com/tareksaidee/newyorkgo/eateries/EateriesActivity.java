@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.tareksaidee.newyorkgo.DTO.Eateries;
-import com.tareksaidee.newyorkgo.eateries.EateriesAdapter;
+import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;

@@ -114,7 +114,7 @@
         android:layout_height="match_parent"
         android:layout_weight="5"
         android:layout_gravity="end"
-        android:background="#444444">
-    </LinearLayout>
+        android:orientation="horizontal"
+        android:background="#444444"/>
 
 </LinearLayout>

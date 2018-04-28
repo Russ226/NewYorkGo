@@ -1,73 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-    <TextView
-        android:id = "@+id/name"
-        android:textSize="32dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text = "Name"
-        />
+    android:orientation="vertical">
 
     <TextView
-        android:id = "@+id/location"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text = "Location"
-        />
+        android:text="Name"
+        android:textSize="32dp" />
 
     <TextView
-        android:id = "@+id/phone"
+        android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text = "Phone"
-        />
+        android:text="Location" />
 
     <TextView
-        android:id = "@+id/url"
+        android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text = "URL"
-        />
+        android:text="Phone" />
 
     <TextView
-        android:id = "@+id/address"
+        android:id="@+id/url"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text = "Address"
-        />
+        android:text="URL" />
 
     <TextView
-        android:id = "@+id/address2"
+        android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text = "Address 2"
-        />
+        android:text="Address" />
 
     <TextView
-        android:id = "@+id/city"
+        android:id="@+id/address2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text = "City"
-        />
+        android:text="Address 2" />
 
     <TextView
-        android:id = "@+id/zip"
+        android:id="@+id/city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text = "Zip Code"
-        />
+        android:text="City" />
+
+    <TextView
+        android:id="@+id/zip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Zip Code" />
 
 </LinearLayout>

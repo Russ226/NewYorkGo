@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
-import android.widget.RelativeLayout;
 
 import com.tareksaidee.newyorkgo.DTO.Category;
 import com.tareksaidee.newyorkgo.artgallery.ArtGalleryActivity;
@@ -22,7 +21,7 @@ public class HomescreenGridView extends AppCompatActivity {
         getData();
         GridView gridview = (GridView) findViewById(R.id.gridView);
         gridview.setAdapter(new HomescreenGridAdapter(this, categories));
-        gridview.setLayoutParams(new RelativeLayout.LayoutParams(GridView.AUTO_FIT,GridView.AUTO_FIT));
+        //gridview.setLayoutParams(new RelativeLayout.LayoutParams(GridView.AUTO_FIT,GridView.AUTO_FIT));
     }
 
     private void getData() {
