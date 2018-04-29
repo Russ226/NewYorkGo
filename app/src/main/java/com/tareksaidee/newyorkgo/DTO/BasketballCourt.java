@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 public class BasketballCourt extends Recreation{
     @SerializedName("Name")
     private String name;
@@ -14,6 +16,8 @@ public class BasketballCourt extends Recreation{
 
     @SerializedName("Accessible")
     private String wheelchair;
+
+    private Double distance;
 
     public String getName() {
         return name;
@@ -69,4 +73,18 @@ public class BasketballCourt extends Recreation{
         this.numCourts = numCourts;
         this.wheelchair = wheelchair;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<BasketballCourt> COMPARE_BY_DISTANCE = new Comparator<BasketballCourt>() {
+        public int compare(BasketballCourt one, BasketballCourt other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }

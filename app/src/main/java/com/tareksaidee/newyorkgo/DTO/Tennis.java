@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 /**
  * Created by tarek on 4/27/2018.
  */
@@ -40,6 +42,8 @@ public class Tennis extends Recreation{
 
     @SerializedName("lon")
     private String lon;
+
+    private Double distance;
 
     public Tennis(String propName, String name, String location, String phone, String courts, String indoorOutdoor, String tennisType, String accessible, String info, String lat, String lon) {
         this.propName = propName;
@@ -157,4 +161,18 @@ public class Tennis extends Recreation{
     public void setLon(String lon) {
         this.lon = lon;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<Tennis> COMPARE_BY_DISTANCE = new Comparator<Tennis>() {
+        public int compare(Tennis one, Tennis other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }

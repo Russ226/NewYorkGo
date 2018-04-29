@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 /**
  * Created by russ on 4/27/18.
  */
@@ -18,6 +20,8 @@ public class Handball extends Recreation{
 
     @SerializedName("Num_of_Courts")
     private String numOfCourts;
+
+    private Double distance;
 
     public Handball(String propId, String name, String location, String numOfCourts) {
         this.propId = propId;
@@ -72,4 +76,18 @@ public class Handball extends Recreation{
     public void setNumOfCourts(String numOfCourts) {
         this.numOfCourts = numOfCourts;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<Handball> COMPARE_BY_DISTANCE = new Comparator<Handball>() {
+        public int compare(Handball one, Handball other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }
