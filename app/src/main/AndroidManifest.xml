@@ -39,7 +39,7 @@
         <activity
             android:name=".ShowAddressActivity"
             android:label="@string/title_activity_show_address" />
-        <activity android:name=".BookmarksActivity"></activity>
+        <activity android:name=".BookmarksActivity"/>
         <activity android:name=".bball.BasketballCourtActivity" />
         <activity android:name=".beaches.BeachesActivity" />
         <activity android:name=".dogruns.DogRunsActivity" />

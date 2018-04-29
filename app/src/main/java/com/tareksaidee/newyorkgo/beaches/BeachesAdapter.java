@@ -60,7 +60,7 @@ public class BeachesAdapter extends RecyclerView.Adapter<BeachesAdapter.BeachesV
         holder.bathroom.setText(beach.getBathroom());
         holder.bikeSkate.setText(beach.getBicycleAndSkatePath());
         holder.boardWalk.setText(beach.getBoardwalk());
-        holder.description.setText(beach.getDescription());
+        //holder.description.setText(beach.getDescription());
         holder.location.setText(beach.getLocation());
         holder.bookmarkButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,14 +1,13 @@
 package com.tareksaidee.newyorkgo.indoorswimmingpool;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.tareksaidee.newyorkgo.DTO.IndoorSwimmingPool;
 import com.tareksaidee.newyorkgo.R;
-import com.tareksaidee.newyorkgo.indoorswimmingpool.IndoorSwimmingPoolAdapter;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class IndoorSwimmingPoolActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.e("Indoor Swimming Pool", e.getMessage());
         }
-        indoorSwimmingPoolView = findViewById(R.id.bbqRecyclerView);
+        indoorSwimmingPoolView = findViewById(R.id.indoorSwimmingPoolRecyclerView);
         ISPAdapter = new IndoorSwimmingPoolAdapter(this, ISP);
         indoorSwimmingPoolView.setAdapter(ISPAdapter);
         indoorSwimmingPoolView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
