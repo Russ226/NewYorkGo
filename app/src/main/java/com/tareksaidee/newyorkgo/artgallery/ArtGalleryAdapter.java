@@ -26,7 +26,7 @@ import java.util.Random;
  * Created by tarek on 4/28/2018.
  */
 
-public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.ArtGalleryViewHolder> implements View.OnClickListener {
+public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.ArtGalleryViewHolder> {
 
     ArrayList<ArtGallery> artGalleries;
     private Context mContext;
@@ -48,7 +48,6 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
     @Override
     public ArtGalleryAdapter.ArtGalleryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.art_gallery_card, parent, false);
-        view.setOnClickListener(this);
         return new ArtGalleryViewHolder(view);
     }
 
@@ -64,17 +63,24 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
         holder.bookmarkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mFirebaseAuth.getCurrentUser()!=null) {
+                if (mFirebaseAuth.getCurrentUser() != null) {
                     String key = (new Random().nextInt(100000000)) + "";
-                    mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid()+"/full/"+key)
+                    mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(gallery);
-                    Bookmark bookmark = new Bookmark(gallery.getName(),key);
-                    mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid()+"/part/")
+                    Bookmark bookmark = new Bookmark(gallery.getName(), key);
+                    mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
+                } else {
+                    Toast.makeText(mContext, "Not logged in", Toast.LENGTH_SHORT).show();
                 }
-                else{
-                    Toast.makeText(mContext,"Not logged in",Toast.LENGTH_SHORT).show();
-                }
+            }
+        });
+        holder.mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ShowAddressActivity.class);
+                intent.putExtra("address", gallery.getAddress1());
+                mContext.startActivity(intent);
             }
         });
     }
@@ -112,10 +118,4 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
         }
     }
 
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(mContext, ShowAddressActivity.class);
-        intent.putExtra("address", ((TextView) view.findViewById(R.id.address)).getText().toString());
-        mContext.startActivity(intent);
-    }
 }
