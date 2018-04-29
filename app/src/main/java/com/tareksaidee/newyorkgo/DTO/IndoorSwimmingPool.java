@@ -32,15 +32,15 @@ public class IndoorSwimmingPool {
     private String accessible;
 
     @SerializedName("lat")
-    private double lat;
+    private String lat;
 
     @SerializedName("long")
-    private double longitude;
+    private String longitude;
 
     @SerializedName("rec_center_id")
     private String recCenterId;
 
-    public IndoorSwimmingPool(String propId, String name, String location, String phone, String poolsIndoorType, String setting, String size, String accessible, double lat, double longitude, String recCenterId) {
+    public IndoorSwimmingPool(String propId, String name, String location, String phone, String poolsIndoorType, String setting, String size, String accessible, String lat, String longitude, String recCenterId) {
         this.propId = propId;
         this.name = name;
         this.location = location;
@@ -118,19 +118,19 @@ public class IndoorSwimmingPool {
         this.accessible = accessible;
     }
 
-    public double getLat() {
+    public String getLat() {
         return lat;
     }
 
-    public void setLat(double lat) {
+    public void setLat(String lat) {
         this.lat = lat;
     }
 
-    public double getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
