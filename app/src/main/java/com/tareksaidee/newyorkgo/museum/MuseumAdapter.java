@@ -9,11 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.tareksaidee.newyorkgo.DTO.Beaches;
 import com.tareksaidee.newyorkgo.DTO.Museum;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.ShowAddressActivity;
-import com.tareksaidee.newyorkgo.beaches.BeachesAdapter;
 
 import java.util.ArrayList;
 
@@ -37,7 +35,12 @@ public class MuseumAdapter extends RecyclerView.Adapter<MuseumAdapter.MuseumView
     public void onBindViewHolder(MuseumViewHolder holder, int position) {
         Museum m = museums.get(position);
         holder.name.setText(m.getName());
-        //fill out
+        holder.tel.setText(m.getName());
+        holder.url.setText(m.getName());
+        holder.address1.setText(m.getName());
+        holder.address2.setText(m.getName());
+        holder.city.setText(m.getName());
+        holder.zipCode.setText(m.getName());
     }
 
     @Override
@@ -51,12 +54,22 @@ public class MuseumAdapter extends RecyclerView.Adapter<MuseumAdapter.MuseumView
 
     class MuseumViewHolder extends RecyclerView.ViewHolder {
         TextView name;
-        //fill out
+        TextView tel;
+        TextView url;
+        TextView address1;
+        TextView address2;
+        TextView city;
+        TextView zipCode;
 
         MuseumViewHolder(View view) {
             super(view);
             name = (TextView) view.findViewById(R.id.name);
-            //fill out
+            tel = (TextView) view.findViewById(R.id.phone);
+            url = (TextView) view.findViewById(R.id.url);
+            address1 = (TextView) view.findViewById(R.id.address);
+            address2 = (TextView) view.findViewById(R.id.address2);
+            city = (TextView) view.findViewById(R.id.city);
+            zipCode = (TextView) view.findViewById(R.id.zip);
         }
     }
 

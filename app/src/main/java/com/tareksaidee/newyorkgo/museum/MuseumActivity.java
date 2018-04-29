@@ -15,11 +15,8 @@ import java.util.ArrayList;
 
 public class MuseumActivity extends AppCompatActivity {
 
-    //private ArrayList<BBQ> bbqs;
     private ArrayList<Museum> M;
-    //private RecyclerView bbqsView;
     private RecyclerView museumView;
-    //private BBQAdapter bbqAdapter;
     private MuseumAdapter museumAdapter;
     private JsonParser parser;
 
