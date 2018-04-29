@@ -12,7 +12,7 @@ public class Park extends Recreation{
     private String location;
 
     @SerializedName("Zip")
-    private int zipCode;
+    private String zipCode;
 
     private Double distance;
 
@@ -47,23 +47,23 @@ public class Park extends Recreation{
         this.location = location;
     }
 
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(int zipCode) {
+    public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
-    public int getPropID() {
+    public String getPropID() {
         return propID;
     }
 
-    public void setPropID(int propID) {
+    public void setPropID(String propID) {
         this.propID = propID;
     }
 
-    public Park(String name, String location, int zipCode, int propID) {
+    public Park(String name, String location, String zipCode, String propID) {
         this.name = name;
         this.location = location;
 
@@ -72,7 +72,7 @@ public class Park extends Recreation{
     }
 
     @SerializedName("Prop_ID")
-    private int propID;
+    private String propID;
 
     public Double getDistance() {
         return distance;

@@ -1,6 +1,5 @@
 package com.tareksaidee.newyorkgo.parser;
 
-import android.content.Context;
 import android.content.res.AssetManager;
 
 import com.google.gson.Gson;
@@ -24,9 +23,6 @@ import com.tareksaidee.newyorkgo.DTO.Theater;
 import com.tareksaidee.newyorkgo.DTO.ZooAqu;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -196,7 +192,7 @@ public class JsonParser {
     public ArrayList<Park> getPark(AssetManager assetManager) throws IOException{
         String filePath = "parks.json";
 
-        Type collectionType = new TypeToken<Collection<Tennis>>(){}.getType();
+        Type collectionType = new TypeToken<Collection<Park>>(){}.getType();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(assetManager.open(filePath)));
 
         ArrayList<Park> parks = new ArrayList<>((Collection<? extends Park>) gson.fromJson(bufferedReader, collectionType));
