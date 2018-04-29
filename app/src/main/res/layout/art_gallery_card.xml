@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin = "10dp"
-    android:background="@drawable/cardview_drawable">
+    android:background="@drawable/cardview_drawable"
+    android:backgroundTint="#55FFFFFF"
+    android:backgroundTintMode="src_over">
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -13,6 +16,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_weight="95">
+
 
         <TextView
             android:id = "@+id/name"
