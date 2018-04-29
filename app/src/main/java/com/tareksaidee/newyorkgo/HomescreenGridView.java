@@ -59,11 +59,11 @@ public class HomescreenGridView extends AppCompatActivity {
         categories.add(category);
         category = new Category("Ice Skating", ContextCompat.getDrawable(this, R.drawable.iceskating), IceSkatingActivity.class);
         categories.add(category);
-        category = new Category("Indoor Swimming Pool", ContextCompat.getDrawable(this, R.drawable.indoorswimming), IndoorSwimmingPoolActivity.class);
+        category = new Category("Indoor Pool", ContextCompat.getDrawable(this, R.drawable.indoorswimming), IndoorSwimmingPoolActivity.class);
         categories.add(category);
         category = new Category("Nature Preserves", ContextCompat.getDrawable(this, R.drawable.nature), NaturePreservesActivity.class);
         categories.add(category);
-        category = new Category("Outdoor Swimming", ContextCompat.getDrawable(this, R.drawable.outdoorswimming),OutdoorSwimmingActivity.class);
+        category = new Category("Outdoor Pool", ContextCompat.getDrawable(this, R.drawable.outdoorswimming),OutdoorSwimmingActivity.class);
         categories.add(category);
         category = new Category("Parks", ContextCompat.getDrawable(this, R.drawable.parks), ParkActivity.class);
         categories.add(category);
