@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 /**
  * Created by tarek on 4/27/2018.
  */
@@ -25,6 +27,8 @@ public class DogRuns extends Recreation{
 
     @SerializedName("Notes")
     private String notes;
+
+    private Double distance;
 
 
     public DogRuns(String propID, String name, String address, String dogRunsType, String accessible, String notes) {
@@ -98,4 +102,18 @@ public class DogRuns extends Recreation{
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<DogRuns> COMPARE_BY_DISTANCE = new Comparator<DogRuns>() {
+        public int compare(DogRuns one, DogRuns other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }

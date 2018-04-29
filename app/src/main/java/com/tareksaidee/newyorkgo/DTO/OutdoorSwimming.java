@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 /**
  * Created by russ on 4/27/18.
  */
@@ -33,6 +35,8 @@ public class OutdoorSwimming extends Recreation{
 
     @SerializedName("rec_center_id")
     private String recCenterId;
+
+    private Double distance;
 
     public OutdoorSwimming(String propID, String name, String phone, String poolsOutdoorType, String setting, String size, String lat, String longitude, String recCenterId) {
         this.propID = propID;
@@ -137,4 +141,18 @@ public class OutdoorSwimming extends Recreation{
     public void setRecCenterId(String recCenterId) {
         this.recCenterId = recCenterId;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<OutdoorSwimming> COMPARE_BY_DISTANCE = new Comparator<OutdoorSwimming>() {
+        public int compare(OutdoorSwimming one, OutdoorSwimming other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }

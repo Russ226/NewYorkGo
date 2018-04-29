@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 /**
  * Created by russ on 4/27/18.
  */
@@ -69,6 +71,8 @@ public class IceSkating extends Recreation{
 
     @SerializedName("Notes")
     private String notes;
+
+    private Double distance;
 
     public IceSkating(String propId, String name, String location, String phone, String accessible, String type, String publicSkateAdmissionPriceAdult, String publicSkateAdmissionPriceChild, String publicSkateAdmissionPriceSenior, String openingDate, String closingDate, String sundayPublicSkatingHours, String mondayPublicSkatingHours, String tuesdayPublicSkatingHours, String wednesdayPublicSkatingHours, String thursdayPublicSkatingHours, String fridayPublicSkatingHours, String saturdayPublicSkatingHours, String holidayPublicSkatingHours, String programming, String notes) {
         this.propId = propId;
@@ -276,4 +280,18 @@ public class IceSkating extends Recreation{
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<IceSkating> COMPARE_BY_DISTANCE = new Comparator<IceSkating>() {
+        public int compare(IceSkating one, IceSkating other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }

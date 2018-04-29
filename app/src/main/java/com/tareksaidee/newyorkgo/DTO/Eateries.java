@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 /**
  * Created by tarek on 4/27/2018.
  */
@@ -37,6 +39,8 @@ public class Eateries extends Recreation{
 
     @SerializedName("type_name")
     private String typeName;
+
+    private Double distance;
 
     public Eateries(String name, String location, String parkID, String startDate, String endDate, String description, String permitNumber, String phone, String website, String typeName) {
         this.name = name;
@@ -145,4 +149,18 @@ public class Eateries extends Recreation{
     public void setTypeName(String typeName) {
         this.typeName = typeName;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<Eateries> COMPARE_BY_DISTANCE = new Comparator<Eateries>() {
+        public int compare(Eateries one, Eateries other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }

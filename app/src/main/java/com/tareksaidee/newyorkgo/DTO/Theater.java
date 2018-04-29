@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 public class Theater extends Recreation{
         @SerializedName("the_geom")
         private transient Geom the_geom;
@@ -26,6 +28,8 @@ public class Theater extends Recreation{
 
         @SerializedName("zip")
         private String zipCode;
+
+        private Double distance;
 
         public Theater(Geom the_geom, String name, String tel, String url, String address1, String address2, String city, String zipCode) {
             this.the_geom = the_geom;
@@ -116,6 +120,20 @@ public class Theater extends Recreation{
         public void setZipCode(String zipCode) {
             this.zipCode = zipCode;
         }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<Theater> COMPARE_BY_DISTANCE = new Comparator<Theater>() {
+        public int compare(Theater one, Theater other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }
 
 

@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 public class ZooAqu extends Recreation{
 
     @SerializedName("Name")
@@ -15,6 +17,8 @@ public class ZooAqu extends Recreation{
 
     @SerializedName("Prop_ID")
     private String propID;
+
+    private Double distance;
 
     public ZooAqu(String name, String location, String phoneNum, String propID) {
         this.name = name;
@@ -69,4 +73,18 @@ public class ZooAqu extends Recreation{
     public void setPropID(String propID) {
         this.propID = propID;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<ZooAqu> COMPARE_BY_DISTANCE = new Comparator<ZooAqu>() {
+        public int compare(ZooAqu one, ZooAqu other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }

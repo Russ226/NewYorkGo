@@ -2,6 +2,8 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 /**
  * Created by tarek on 4/27/2018.
  */
@@ -65,6 +67,8 @@ public class Beaches extends Recreation{
 
     @SerializedName("Description")
     private String description;
+
+    private Double distance;
 
     public Beaches(String propID, String name, String location, String phone, String surf, String note, String accessible, String accessibleNotes, String barbecueAllowed, String bathroom, String bicycleAndSkatePath, String boardwalk, String concessionStand, String performancePavilion, String mobileChargingStations, String directions, String lat, String lon, String description) {
         this.propID = propID;
@@ -254,4 +258,18 @@ public class Beaches extends Recreation{
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+
+    public static Comparator<Beaches> COMPARE_BY_DISTANCE = new Comparator<Beaches>() {
+        public int compare(Beaches one, Beaches other) {
+            return one.distance.compareTo(other.distance);
+        }
+    };
 }
