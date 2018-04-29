@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
         videoview = (VideoView) findViewById(R.id.background_video);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.nycvid);
         videoview.setVideoURI(uri);
