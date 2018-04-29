@@ -33,6 +33,7 @@ public class BBQAdapter extends RecyclerView.Adapter<BBQAdapter.BBQViewHolder> i
     @Override
     public BBQAdapter.BBQViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.bbq_card, parent, false);
+        view.setOnClickListener(this);
         return new BBQViewHolder(view);
     }
 
