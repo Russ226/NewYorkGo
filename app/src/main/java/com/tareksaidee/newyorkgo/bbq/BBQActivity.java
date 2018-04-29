@@ -10,6 +10,7 @@ import com.tareksaidee.newyorkgo.DTO.BBQ;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class BBQActivity extends AppCompatActivity {
@@ -31,7 +32,11 @@ public class BBQActivity extends AppCompatActivity {
             Log.e("BBQ", e.getMessage());
         }
         bbqsView = findViewById(R.id.bbqRecyclerView);
-        bbqAdapter = new BBQAdapter(this, bbqs);
+        try {
+            bbqAdapter = new BBQAdapter(this, bbqs);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         bbqsView.setAdapter(bbqAdapter);
         bbqsView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
