@@ -10,9 +10,12 @@ public class Bookmark {
 
     private String detailsID;
 
-    public Bookmark(String name, String detailsID) {
+    private String className;
+
+    public Bookmark(String name, String detailsID, String className) {
         this.name = name;
         this.detailsID = detailsID;
+        this.className = className;
     }
 
     public Bookmark() {
@@ -33,5 +36,13 @@ public class Bookmark {
 
     public void setDetailsID(String detailsID) {
         this.detailsID = detailsID;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
     }
 }
