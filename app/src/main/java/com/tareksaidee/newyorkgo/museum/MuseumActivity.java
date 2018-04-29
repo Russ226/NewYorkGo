@@ -1,13 +1,14 @@
 package com.tareksaidee.newyorkgo.museum;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.tareksaidee.newyorkgo.DTO.Museum;
 import com.tareksaidee.newyorkgo.R;
+import com.tareksaidee.newyorkgo.museum.MuseumAdapter;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;
@@ -35,3 +36,4 @@ public class MuseumActivity extends AppCompatActivity {
         museumView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 }
+
