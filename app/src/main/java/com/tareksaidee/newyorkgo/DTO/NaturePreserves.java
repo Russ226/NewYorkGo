@@ -20,7 +20,7 @@ public class NaturePreserves extends Recreation{
     private String borough;
 
     @SerializedName("Acres")
-    private double acres;
+    private String acres;
 
     @SerializedName("Directions")
     private String directions;
@@ -31,7 +31,7 @@ public class NaturePreserves extends Recreation{
     @SerializedName("HabitatType")
     private String habitatType;
 
-    public NaturePreserves(String parkId, String parkName, String sanctuaryName, String borough, double acres, String directions, String description, String habitatType) {
+    public NaturePreserves(String parkId, String parkName, String sanctuaryName, String borough, String acres, String directions, String description, String habitatType) {
         this.parkId = parkId;
         this.parkName = parkName;
         this.sanctuaryName = sanctuaryName;
@@ -94,11 +94,11 @@ public class NaturePreserves extends Recreation{
         this.borough = borough;
     }
 
-    public double getAcres() {
+    public String getAcres() {
         return acres;
     }
 
-    public void setAcres(double acres) {
+    public void setAcres(String acres) {
         this.acres = acres;
     }
 

@@ -26,15 +26,15 @@ public class OutdoorSwimming extends Recreation{
     private String size;
 
     @SerializedName("lat")
-    private double lat;
+    private String lat;
 
     @SerializedName("long")
-    private double longitude;
+    private String longitude;
 
     @SerializedName("rec_center_id")
     private String recCenterId;
 
-    public OutdoorSwimming(String propID, String name, String phone, String poolsOutdoorType, String setting, String size, double lat, double longitude, String recCenterId) {
+    public OutdoorSwimming(String propID, String name, String phone, String poolsOutdoorType, String setting, String size, String lat, String longitude, String recCenterId) {
         this.propID = propID;
         this.name = name;
         this.phone = phone;
@@ -114,19 +114,19 @@ public class OutdoorSwimming extends Recreation{
         this.size = size;
     }
 
-    public double getLat() {
+    public String getLat() {
         return lat;
     }
 
-    public void setLat(double lat) {
+    public void setLat(String lat) {
         this.lat = lat;
     }
 
-    public double getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 

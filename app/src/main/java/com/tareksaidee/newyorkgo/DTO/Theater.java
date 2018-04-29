@@ -25,9 +25,9 @@ public class Theater extends Recreation{
         private String city;
 
         @SerializedName("zip")
-        private double zipCode;
+        private String zipCode;
 
-        public Theater(Geom the_geom, String name, String tel, String url, String address1, String address2, String city, double zipCode) {
+        public Theater(Geom the_geom, String name, String tel, String url, String address1, String address2, String city, String zipCode) {
             this.the_geom = the_geom;
             this.name = name;
             this.tel = tel;
@@ -109,11 +109,11 @@ public class Theater extends Recreation{
             this.city = city;
         }
 
-        public double getZipCode() {
+        public String getZipCode() {
             return zipCode;
         }
 
-        public void setZipCode(double zipCode) {
+        public void setZipCode(String zipCode) {
             this.zipCode = zipCode;
         }
 }
