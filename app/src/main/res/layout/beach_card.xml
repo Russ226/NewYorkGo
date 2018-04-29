@@ -116,11 +116,13 @@
             android:layout_gravity="end">
 
             <Button
+                android:id="@+id/map"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Map"/>
 
             <Button
+                android:id="@+id/bookmark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bookmark"/>
@@ -133,9 +135,9 @@
         android:id="@+id/colorBar"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="5"
         android:layout_gravity="end"
-        android:orientation="horizontal"
-        android:background="#444444"/>
+        android:layout_weight="5"
+        android:background="#444444"
+        android:orientation="horizontal" />
 
 </LinearLayout>

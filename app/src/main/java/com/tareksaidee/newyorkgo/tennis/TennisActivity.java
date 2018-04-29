@@ -1,14 +1,13 @@
 package com.tareksaidee.newyorkgo.tennis;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.tareksaidee.newyorkgo.DTO.Tennis;
 import com.tareksaidee.newyorkgo.R;
-import com.tareksaidee.newyorkgo.tennis.TennisAdapter;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class TennisActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.e("Tennis", e.getMessage());
         }
-        tennisView = findViewById(R.id.museumRecyclerView);
+        tennisView = findViewById(R.id.tennisActivity);
         tennisAdapter = new TennisAdapter(this, T);
         tennisView.setAdapter(tennisAdapter);
         tennisView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.ArtGallery;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
@@ -23,11 +24,16 @@ public class ArtGalleryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_art_gallery);
-        parser = new JsonParser();
-        try {
-            artGalleries = parser.getArtGAllery(getAssets());
-        } catch (Exception e) {
-            Log.e("Art gallery", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            artGalleries = new ArrayList<>();
+            artGalleries.add(new Gson().fromJson(getIntent().getStringExtra("object"), ArtGallery.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                artGalleries = parser.getArtGAllery(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         artGalleriesView = findViewById(R.id.artGalleryRecyclerView);
         artGalleryAdapter = new ArtGalleryAdapter(this, artGalleries);

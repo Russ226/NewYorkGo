@@ -2,11 +2,8 @@ package com.tareksaidee.newyorkgo.indoorswimmingpool;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +18,6 @@ import com.tareksaidee.newyorkgo.DTO.Bookmark;
 import com.tareksaidee.newyorkgo.DTO.IndoorSwimmingPool;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.ShowAddressActivity;
-import com.tareksaidee.newyorkgo.indoorswimmingpool.IndoorSwimmingPoolActivity;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;
@@ -50,7 +46,7 @@ public class IndoorSwimmingPoolAdapter extends RecyclerView.Adapter<IndoorSwimmi
 
     @Override
     public IndoorSwimmingPoolAdapter.IndoorSwimmingPoolViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.bbq_card, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.indoor_swimming_pool_card, parent, false);
         return new IndoorSwimmingPoolViewHolder(view);
     }
 

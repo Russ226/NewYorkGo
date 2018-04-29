@@ -18,8 +18,6 @@ import com.tareksaidee.newyorkgo.DTO.Bookmark;
 import com.tareksaidee.newyorkgo.DTO.Hiking;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.ShowAddressActivity;
-import com.tareksaidee.newyorkgo.hiking.HikingAdapter;
-
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -116,7 +114,7 @@ public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingView
             super(view);
             name = (TextView) view.findViewById(R.id.name);
             location = (TextView) view.findViewById(R.id.location);
-            parkName = (TextView) view.findViewById(R.id.courts);
+            parkName = (TextView) view.findViewById(R.id.parkName);
             length = (TextView) view.findViewById(R.id.length);
             difficulty = (TextView) view.findViewById(R.id.difficulty);
             otherDetails = (TextView) view.findViewById(R.id.otherDetails);

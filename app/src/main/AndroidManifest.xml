@@ -39,7 +39,23 @@
         <activity
             android:name=".ShowAddressActivity"
             android:label="@string/title_activity_show_address" />
-        <activity android:name=".BookmarksActivity"></activity>
+        <activity android:name=".BookmarksActivity"/>
+        <activity android:name=".bball.BasketballCourtActivity" />
+        <activity android:name=".beaches.BeachesActivity" />
+        <activity android:name=".dogruns.DogRunsActivity" />
+        <activity android:name=".eateries.EateriesActivity" />
+        <activity android:name=".handball.HandballActivity" />
+        <activity android:name=".hiking.HikingActivity" />
+        <activity android:name=".iceskating.IceSkatingActivity" />
+        <activity android:name=".indoorswimmingpool.IndoorSwimmingPoolActivity" />
+        <activity android:name=".museum.MuseumActivity" />
+        <activity android:name=".naturepreserves.NaturePreservesActivity" />
+        <activity android:name=".outdoorswimming.OutdoorSwimmingActivity" />
+        <activity android:name=".park.ParkActivity" />
+        <activity android:name=".tennis.TennisActivity" />
+        <activity android:name=".theater.TheaterActivity" />
+        <activity android:name=".zooaq.ZooAqActivity" />
+
     </application>
 
 </manifest>
