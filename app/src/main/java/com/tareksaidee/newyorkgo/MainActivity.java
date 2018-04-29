@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.button3:
-                intent = new Intent(this, HomescreenGridView.class);
+                intent = new Intent(this, About.class);
                 startActivity(intent);
                 break;
         }
