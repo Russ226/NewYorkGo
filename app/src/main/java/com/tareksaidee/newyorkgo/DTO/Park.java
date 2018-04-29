@@ -2,7 +2,7 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Park {
+public class Park extends Recreation{
     @SerializedName("Name")
     private String name;
 
@@ -22,6 +22,21 @@ public class Park {
 
     public String getLocation() {
         return location;
+    }
+
+    @Override
+    public String getParkName() {
+        return null;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
+    }
+
+    @Override
+    public String getAddress1() {
+        return null;
     }
 
     public void setLocation(String location) {

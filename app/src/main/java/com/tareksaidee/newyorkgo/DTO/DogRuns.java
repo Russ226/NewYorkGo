@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by tarek on 4/27/2018.
  */
 
-public class DogRuns {
+public class DogRuns extends Recreation{
 
     @SerializedName("Prop_ID")
     private String propID;
@@ -48,12 +48,27 @@ public class DogRuns {
         return name;
     }
 
+    @Override
+    public String getLocation() {
+        return null;
+    }
+
+    @Override
+    public String getParkName() {
+        return null;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getAddress() {
         return address;
+    }
+
+    @Override
+    public String getAddress1() {
+        return null;
     }
 
     public void setAddress(String address) {

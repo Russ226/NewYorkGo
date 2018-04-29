@@ -2,7 +2,7 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ArtGallery {
+public class ArtGallery extends Recreation{
     @SerializedName("the_geom")
     private transient Geom the_geom;
 
@@ -46,8 +46,24 @@ public class ArtGallery {
         this.the_geom = the_geom;
     }
 
+    @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String getLocation() {
+        return null;
+    }
+
+    @Override
+    public String getParkName() {
+        return null;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
     }
 
     public void setName(String name) {

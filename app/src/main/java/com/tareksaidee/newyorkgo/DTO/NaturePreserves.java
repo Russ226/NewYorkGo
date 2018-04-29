@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by russ on 4/27/18.
  */
 
-public class NaturePreserves {
+public class NaturePreserves extends Recreation{
     @SerializedName("ParkID")
     private String parkId;
 
@@ -50,8 +50,28 @@ public class NaturePreserves {
         this.parkId = parkId;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public String getLocation() {
+        return null;
+    }
+
     public String getParkName() {
         return parkName;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
+    }
+
+    @Override
+    public String getAddress1() {
+        return null;
     }
 
     public void setParkName(String parkName) {
