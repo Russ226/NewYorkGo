@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == RC_SIGN_IN) {
             if (resultCode == RESULT_OK) {
                 //signed in
-                Intent intent = new Intent(this, HomescreenGridView.class);
+                Intent intent = new Intent(this, BookmarksActivity.class);
                 startActivity(intent);
                 mFirebaseAuth.addAuthStateListener(mAuthStateListener);
             } else {
@@ -103,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.button2:
                 mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+                if(mFirebaseAuth.getCurrentUser()!=null){
+                    intent = new Intent(this, BookmarksActivity.class);
+                    startActivity(intent);
+                }
                 break;
             case R.id.button3:
                 intent = new Intent(this, HomescreenGridView.class);
