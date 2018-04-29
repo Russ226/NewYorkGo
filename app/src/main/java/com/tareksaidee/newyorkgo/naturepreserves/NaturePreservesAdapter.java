@@ -18,7 +18,6 @@ import com.tareksaidee.newyorkgo.DTO.Bookmark;
 import com.tareksaidee.newyorkgo.DTO.NaturePreserves;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.ShowAddressActivity;
-import com.tareksaidee.newyorkgo.naturepreserves.NaturePreservesActivity;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -82,6 +81,9 @@ public class NaturePreservesAdapter extends RecyclerView.Adapter<NaturePreserves
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

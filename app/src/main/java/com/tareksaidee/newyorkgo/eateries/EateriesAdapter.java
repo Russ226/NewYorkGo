@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +60,7 @@ public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.Eateri
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(eatery);
-                    Bookmark bookmark = new Bookmark(eatery.getName(), key, "eatery");
+                    Bookmark bookmark = new Bookmark(eatery.getName(), key, "eateries");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();
@@ -76,6 +77,10 @@ public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.Eateri
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            Log.e("asdsadsad", getItemCount()+"");
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

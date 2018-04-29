@@ -88,6 +88,9 @@ public class IndoorSwimmingPoolAdapter extends RecyclerView.Adapter<IndoorSwimmi
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

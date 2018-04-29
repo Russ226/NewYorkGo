@@ -1,14 +1,14 @@
 package com.tareksaidee.newyorkgo.museum;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.Museum;
 import com.tareksaidee.newyorkgo.R;
-import com.tareksaidee.newyorkgo.museum.MuseumAdapter;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;
@@ -25,10 +25,16 @@ public class MuseumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_museum);
         parser = new JsonParser();
-        try {
-            M = parser.getMuseum(getAssets());
-        } catch (Exception e) {
-            Log.e("Museums", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            M = new ArrayList<>();
+            M.add(new Gson().fromJson(getIntent().getStringExtra("object"), Museum.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                M = parser.getMuseum(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         museumView = findViewById(R.id.museumRecyclerView);
         museumAdapter = new MuseumAdapter(this, M);

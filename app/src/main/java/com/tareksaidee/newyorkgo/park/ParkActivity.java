@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.Park;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
@@ -27,10 +28,16 @@ public class ParkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_park);
         parser = new JsonParser();
-        try {
-            P = parser.getPark(getAssets());
-        } catch (Exception e) {
-            Log.e("Parks", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            P = new ArrayList<>();
+            P.add(new Gson().fromJson(getIntent().getStringExtra("object"), Park.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                P = parser.getPark(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         parkView = findViewById(R.id.parkRecyclerView);
         parkAdapter = new ParkAdapter(this, P);

@@ -80,6 +80,9 @@ public class MuseumAdapter extends RecyclerView.Adapter<MuseumAdapter.MuseumView
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

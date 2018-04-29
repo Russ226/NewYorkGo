@@ -14,13 +14,10 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.tareksaidee.newyorkgo.DTO.BBQ;
 import com.tareksaidee.newyorkgo.DTO.Bookmark;
 import com.tareksaidee.newyorkgo.DTO.Handball;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.ShowAddressActivity;
-import com.tareksaidee.newyorkgo.bbq.BBQAdapter;
-import com.tareksaidee.newyorkgo.handball.HandballActivity;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -81,6 +78,9 @@ public class HandballAdapter extends RecyclerView.Adapter<HandballAdapter.Handba
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

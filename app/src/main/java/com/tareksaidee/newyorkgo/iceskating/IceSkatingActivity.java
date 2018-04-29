@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.IceSkating;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
@@ -26,10 +27,16 @@ public class IceSkatingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ice_skating);
         parser = new JsonParser();
-        try {
-            I = parser.getIceSkating(getAssets());
-        } catch (Exception e) {
-            Log.e("IceSkating", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            I = new ArrayList<>();
+            I.add(new Gson().fromJson(getIntent().getStringExtra("object"), IceSkating.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                I = parser.getIceSkating(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         iceSkatingView = findViewById(R.id.iceskatingRecyclerView);
         iceSkatingAdapter = new IceSkatingAdapter(this, I);
