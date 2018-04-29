@@ -69,7 +69,7 @@ public class BeachesAdapter extends RecyclerView.Adapter<BeachesAdapter.BeachesV
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(beach);
-                    Bookmark bookmark = new Bookmark(beach.getName(), key);
+                    Bookmark bookmark = new Bookmark(beach.getName(), key, "beach");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

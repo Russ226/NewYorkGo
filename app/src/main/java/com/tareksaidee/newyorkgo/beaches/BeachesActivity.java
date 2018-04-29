@@ -15,11 +15,8 @@ import java.util.ArrayList;
 
 public class BeachesActivity extends AppCompatActivity {
 
-    //private ArrayList<BBQ> bbqs;
     private ArrayList<Beaches> beaches;
-    //private RecyclerView bbqsView;
     private RecyclerView beachesView;
-    //private BBQAdapter bbqAdapter;
     private BeachesAdapter beachesAdapter;
     private JsonParser parser;
 
