@@ -7,6 +7,7 @@ import android.widget.GridView;
 
 import com.tareksaidee.newyorkgo.DTO.Category;
 import com.tareksaidee.newyorkgo.artgallery.ArtGalleryActivity;
+import com.tareksaidee.newyorkgo.bbq.BBQActivity;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,7 @@ public class HomescreenGridView extends AppCompatActivity {
     private void getData() {
         Category category = new Category("Art Galleries", ContextCompat.getDrawable(this, R.drawable.gallery), ArtGalleryActivity.class);
         categories.add(category);
-        category = new Category("BBQ Spots", ContextCompat.getDrawable(this, R.drawable.bbqimage), ArtGalleryActivity.class);
+        category = new Category("BBQ Spots", ContextCompat.getDrawable(this, R.drawable.bbqimage), BBQActivity.class);
         categories.add(category);
 //        category = new Category("Art Gallery", ContextCompat.getDrawable(this, R.drawable.ic_launcher_background), ArtGalleryActivity.class);
 //        categories.add(category);

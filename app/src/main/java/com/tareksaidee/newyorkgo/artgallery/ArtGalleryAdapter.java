@@ -37,7 +37,7 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
     @Override
     public void onBindViewHolder(ArtGalleryAdapter.ArtGalleryViewHolder holder, int position) {
         ArtGallery gallery = artGalleries.get(position);
-        holder.title.setText(gallery.getName());
+        holder.name.setText(gallery.getName());
         holder.telephone.setText(gallery.getTel());
         holder.url.setText(gallery.getUrl());
         holder.address.setText(gallery.getAddress1() + "\n" + gallery.getAddress2());
@@ -56,7 +56,7 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
 
     class ArtGalleryViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title;
+        TextView name;
         TextView telephone;
         TextView url;
         TextView address;
@@ -65,7 +65,7 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
 
         ArtGalleryViewHolder(View view) {
             super(view);
-            title = (TextView) view.findViewById(R.id.title);
+            name = (TextView) view.findViewById(R.id.name);
             telephone = (TextView) view.findViewById(R.id.phone);
             url = (TextView) view.findViewById(R.id.url);
             address = (TextView) view.findViewById(R.id.address);
