@@ -36,4 +36,4 @@ public class MuseumActivity extends AppCompatActivity {
         museumView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 }
-}
+
