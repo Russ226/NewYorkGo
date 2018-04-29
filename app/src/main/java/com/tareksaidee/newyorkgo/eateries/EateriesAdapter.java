@@ -60,7 +60,7 @@ public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.Eateri
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(eatery);
-                    Bookmark bookmark = new Bookmark(eatery.getName(), key, "eateries");
+                    Bookmark bookmark = new Bookmark(eatery.getName(), key, "eateries","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

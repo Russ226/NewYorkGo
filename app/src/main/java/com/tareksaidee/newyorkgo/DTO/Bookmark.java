@@ -16,10 +16,16 @@ public class Bookmark {
 
     private Double distance;
 
-    public Bookmark(String name, String detailsID, String className) {
+    private String address;
+
+    private String location;
+
+    public Bookmark(String name, String detailsID, String className, String address) {
         this.name = name;
         this.detailsID = detailsID;
         this.className = className;
+        this.address = address;
+        location = "350 5th Ave";
     }
 
     public Bookmark() {
@@ -63,4 +69,20 @@ public class Bookmark {
             return one.distance.compareTo(other.distance);
         }
     };
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }

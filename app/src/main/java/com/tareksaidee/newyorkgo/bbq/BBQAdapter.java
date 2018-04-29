@@ -92,7 +92,7 @@ public class BBQAdapter extends RecyclerView.Adapter<BBQAdapter.BBQViewHolder> {
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(bbq);
-                    Bookmark bookmark = new Bookmark(bbq.getName(), key, "bbq");
+                    Bookmark bookmark = new Bookmark(bbq.getName(), key, "bbq","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

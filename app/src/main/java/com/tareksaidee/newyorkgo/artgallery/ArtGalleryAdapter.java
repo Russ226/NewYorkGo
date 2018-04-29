@@ -67,7 +67,7 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(gallery);
-                    Bookmark bookmark = new Bookmark(gallery.getName(), key, "artgallery");
+                    Bookmark bookmark = new Bookmark(gallery.getName(), key, "artgallery","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

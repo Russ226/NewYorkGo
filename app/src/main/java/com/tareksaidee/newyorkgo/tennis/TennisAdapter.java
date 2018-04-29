@@ -65,7 +65,7 @@ public class TennisAdapter extends RecyclerView.Adapter<TennisAdapter.TennisView
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(t);
-                    Bookmark bookmark = new Bookmark(t.getName(), key, "tennis");
+                    Bookmark bookmark = new Bookmark(t.getName(), key, "tennis","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

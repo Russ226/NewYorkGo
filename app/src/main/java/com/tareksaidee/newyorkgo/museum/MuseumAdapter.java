@@ -63,7 +63,7 @@ public class MuseumAdapter extends RecyclerView.Adapter<MuseumAdapter.MuseumView
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(m);
-                    Bookmark bookmark = new Bookmark(m.getName(), key, "museum");
+                    Bookmark bookmark = new Bookmark(m.getName(), key, "museum","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

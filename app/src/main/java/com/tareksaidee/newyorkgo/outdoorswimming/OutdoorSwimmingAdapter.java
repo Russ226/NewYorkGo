@@ -65,7 +65,7 @@ public class OutdoorSwimmingAdapter extends RecyclerView.Adapter<OutdoorSwimming
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(O);
-                    Bookmark bookmark = new Bookmark(O.getName(), key, "outdoorswimming");
+                    Bookmark bookmark = new Bookmark(O.getName(), key, "outdoorswimming","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

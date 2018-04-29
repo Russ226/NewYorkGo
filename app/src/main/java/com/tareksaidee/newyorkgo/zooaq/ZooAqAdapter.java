@@ -58,7 +58,7 @@ public class ZooAqAdapter extends RecyclerView.Adapter<ZooAqAdapter.ZooAqViewHol
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(m);
-                    Bookmark bookmark = new Bookmark(m.getName(), key, "zooaq");
+                    Bookmark bookmark = new Bookmark(m.getName(), key, "zooaq","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();
