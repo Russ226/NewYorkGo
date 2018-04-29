@@ -79,6 +79,7 @@ public class BookmarksActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         detachReadListener();
+        adapter.clear();
     }
 
     @Override

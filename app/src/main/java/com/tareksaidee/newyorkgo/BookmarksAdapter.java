@@ -160,6 +160,10 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
         return bookmarks.size();
     }
 
+    public void clear(){
+        bookmarks.clear();
+    }
+
     void add(Bookmark bookmark) {
         bookmarks.add(bookmark);
     }
