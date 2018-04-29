@@ -4,11 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:orientation="vertical"
     android:gravity="center_horizontal">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="About Us"
         android:textSize="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daniel Au"/>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:src = "@drawable/daniel"/>
 </LinearLayout>
