@@ -14,11 +14,11 @@
     map:cameraTilt="30"
     map:cameraZoom="13"
     map:mapType="normal"
-    map:uiCompass="false"
+    map:uiCompass="true"
     map:uiRotateGestures="true"
     map:uiScrollGestures="false"
     map:uiTiltGestures="true"
-    map:uiZoomControls="false"
+    map:uiZoomControls="true"
     map:uiZoomGestures="true"
     tools:ignore="MissingPrefix"/>
 

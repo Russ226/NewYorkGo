@@ -47,13 +47,6 @@ public class ShowAddressActivity extends FragmentActivity implements OnMapReadyC
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-
-
-
-
-
-
         // Add a marker in Sydney and move the camera
         Geocoder geocoder = new Geocoder(this, new Locale("New York City"));
         List<Address> addressList = null;
@@ -71,6 +64,8 @@ public class ShowAddressActivity extends FragmentActivity implements OnMapReadyC
         // Zoom in, animating the camera.
         mMap.animateCamera(CameraUpdateFactory.zoomIn());
         mMap.getUiSettings().setAllGesturesEnabled(true);
+        mMap.getUiSettings().setMapToolbarEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
 
         // Zoom out to zoom level 10, animating with a duration of 2 seconds.
         mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
