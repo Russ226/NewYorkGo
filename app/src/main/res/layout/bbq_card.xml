@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin = "10dp"
     android:background="@drawable/cardview_drawable"
+    android:backgroundTint="#55FFFFFF"
+    android:backgroundTintMode="src_over"
     >
 
     <LinearLayout
@@ -28,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text = "Location:"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -35,6 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="5"
+        android:orientation="horizontal"
         android:layout_gravity="end"
         android:background="#444444">
     </LinearLayout>
