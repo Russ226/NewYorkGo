@@ -2,10 +2,9 @@ package com.tareksaidee.newyorkgo;
 
 import android.location.Address;
 import android.location.Geocoder;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -28,6 +27,7 @@ public class ShowAddressActivity extends FragmentActivity implements OnMapReadyC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_address);
+        address = getIntent().getStringExtra("address");
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -49,7 +49,10 @@ public class ShowAddressActivity extends FragmentActivity implements OnMapReadyC
         mMap = googleMap;
 
 
-        address = "2552 east 7 st";
+
+
+
+
 
         // Add a marker in Sydney and move the camera
         Geocoder geocoder = new Geocoder(this, new Locale("New York City"));
@@ -81,8 +84,6 @@ public class ShowAddressActivity extends FragmentActivity implements OnMapReadyC
                 .build();                   // Creates a CameraPosition from the builder
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(place));
-
-
     }
 
 

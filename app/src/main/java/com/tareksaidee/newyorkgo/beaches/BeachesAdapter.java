@@ -1,6 +1,7 @@
 package com.tareksaidee.newyorkgo.beaches;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,10 +11,11 @@ import android.widget.TextView;
 
 import com.tareksaidee.newyorkgo.DTO.Beaches;
 import com.tareksaidee.newyorkgo.R;
+import com.tareksaidee.newyorkgo.ShowAddressActivity;
 
 import java.util.ArrayList;
 
-public class BeachesAdapter extends RecyclerView.Adapter<BeachesAdapter.BeachesViewHolder> {
+public class BeachesAdapter extends RecyclerView.Adapter<BeachesAdapter.BeachesViewHolder> implements View.OnClickListener{
 
     ArrayList<Beaches> beaches;
     private Context mContext;
@@ -92,5 +94,12 @@ public class BeachesAdapter extends RecyclerView.Adapter<BeachesAdapter.BeachesV
             latitutde = (TextView) view.findViewById(R.id.lat);
             description = (TextView) view.findViewById(R.id.description);
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(mContext, ShowAddressActivity.class);
+        intent.putExtra("address", ((TextView) view.findViewById(R.id.location)).getText().toString());
+        mContext.startActivity(intent);
     }
 }
