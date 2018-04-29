@@ -17,8 +17,24 @@
         android:layout_height="wrap_content"
         android:text="Daniel Au"/>
 
-    <ImageView
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src = "@drawable/daniel"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joseph Yang"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ruslan Radetskiy"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steven Woo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarek Saidee"/>
+
 </LinearLayout>
