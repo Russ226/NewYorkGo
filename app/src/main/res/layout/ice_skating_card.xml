@@ -1,141 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_margin = "10dp"
+    android:background="@drawable/cardview_drawable">
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width = "0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Name"
-        android:textSize="32dp" />
+        android:padding="10dp"
+        android:layout_weight="95">
 
-    <TextView
-        android:id="@+id/location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Location" />
+        <TextView
+            android:id = "@+id/name"
+            android:textSize = "32dp"
+            android:textStyle= "bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Name"/>
 
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Phone" />
+        <TextView
+            android:id = "@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Location:"/>
 
-    <TextView
-        android:id="@+id/access"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Accessible" />
+        <TextView
+            android:id = "@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Phone Number:"/>
 
-    <TextView
-        android:id="@+id/iceSkate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Ice Skating Type" />
+        <TextView
+            android:id = "@+id/accessible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Wheelchair Accessible:"/>
 
-    <TextView
-        android:id="@+id/adult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Public Skate Admission Price Adult" />
+        <TextView
+            android:id = "@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Type:"/>
 
-    <TextView
-        android:id="@+id/child"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Public Skate Admission Price Child" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/senior"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Public Skate Admission Price Senior" />
-
-    <TextView
-        android:id="@+id/open"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Opening Date" />
-
-    <TextView
-        android:id="@+id/close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Close Date" />
-
-    <TextView
-        android:id="@+id/iceSkate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Ice Skating Type" />
-
-    <TextView
-        android:id="@+id/sun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Sunday Public Skating Hours" />
-
-    <TextView
-        android:id="@+id/mon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Monday Public Skating Hours" />
-
-    <TextView
-        android:id="@+id/tues"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Tuesday Public Skating Hours" />
-
-    <TextView
-        android:id="@+id/wed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Wednesday Public Skating Hours" />
-
-    <TextView
-        android:id="@+id/thur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Thursday Public Skating Hours" />
-
-    <TextView
-        android:id="@+id/fri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Friday Public Skating Hours" />
-
-    <TextView
-        android:id="@+id/sat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Saturday Public Skating Hours" />
-
-    <TextView
-        android:id="@+id/hol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Holiday Public Skating Hours" />
+    <LinearLayout
+        android:id="@+id/colorBar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:background="#444444">
+    </LinearLayout>
 
 </LinearLayout>
