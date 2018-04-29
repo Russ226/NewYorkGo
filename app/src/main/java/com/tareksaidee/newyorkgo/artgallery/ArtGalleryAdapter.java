@@ -70,6 +70,7 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
                     Bookmark bookmark = new Bookmark(gallery.getName(), key);
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
+                    Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(mContext, "Not logged in", Toast.LENGTH_SHORT).show();
                 }
