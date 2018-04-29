@@ -46,6 +46,96 @@
             android:layout_height="wrap_content"
             android:text = "Type:"/>
 
+        <TextView
+            android:id = "@+id/admissionPriceAdult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Admission Price(Adult):"/>
+
+        <TextView
+            android:id = "@+id/admissionPriceChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Admission Price(Child):"/>
+
+        <TextView
+            android:id = "@+id/admissionPriceSenior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Admission Price(Senior):"/>
+
+        <TextView
+            android:id = "@+id/openingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Opening Date:"/>
+
+        <TextView
+            android:id = "@+id/closingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Closing Date:"/>
+
+        <TextView
+            android:id = "@+id/sundayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Sunday Hours:"/>
+
+        <TextView
+            android:id = "@+id/mondayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Monday Hours:"/>
+
+        <TextView
+            android:id = "@+id/tuesdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Tuesday Hours:"/>
+
+        <TextView
+            android:id = "@+id/wednesdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Wednesday Hours:"/>
+
+        <TextView
+            android:id = "@+id/ThursdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Thursday Hours:"/>
+
+        <TextView
+            android:id = "@+id/fridayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Friday Hours:"/>
+
+        <TextView
+            android:id = "@+id/saturdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Saturday Hours:"/>
+
+        <TextView
+            android:id = "@+id/holidayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Holiday Hours:"/>
+
+        <TextView
+            android:id = "@+id/programming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Programming:"/>
+
+        <TextView
+            android:id = "@+id/notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Notes:"/>
+
     </LinearLayout>
 
     <LinearLayout
