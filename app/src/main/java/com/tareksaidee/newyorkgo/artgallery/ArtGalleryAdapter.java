@@ -75,8 +75,6 @@ public class ArtGalleryAdapter extends RecyclerView.Adapter<ArtGalleryAdapter.Ar
             city = (TextView) view.findViewById(R.id.city);
             zipcode = (TextView) view.findViewById(R.id.zip);
         }
-
-
     }
 
     @Override
