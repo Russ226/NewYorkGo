@@ -42,7 +42,6 @@ public class BasketballCourtAdapter extends RecyclerView.Adapter<BasketballCourt
         mBookmarksDatabaseReferenceFull = mFirebaseDatabase.getReference();
         mBookmarksDatabaseReferencePart = mFirebaseDatabase.getReference();
         mFirebaseAuth = FirebaseAuth.getInstance();
-
     }
 
     @Override
@@ -67,7 +66,7 @@ public class BasketballCourtAdapter extends RecyclerView.Adapter<BasketballCourt
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(bballs);
-                    Bookmark bookmark = new Bookmark(bballs.getName(), key);
+                    Bookmark bookmark = new Bookmark(bballs.getName(), key, "basketballcourt");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();
@@ -103,7 +102,6 @@ public class BasketballCourtAdapter extends RecyclerView.Adapter<BasketballCourt
         TextView wheelchairAccess;
         Button mapButton;
         Button bookmarkButton;
-
 
         BasketballCourtViewHolder(View view) {
             super(view);

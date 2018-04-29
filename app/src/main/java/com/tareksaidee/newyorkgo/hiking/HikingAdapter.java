@@ -1,28 +1,45 @@
 package com.tareksaidee.newyorkgo.hiking;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.tareksaidee.newyorkgo.DTO.Bookmark;
 import com.tareksaidee.newyorkgo.DTO.Hiking;
 import com.tareksaidee.newyorkgo.R;
+import com.tareksaidee.newyorkgo.ShowAddressActivity;
 import com.tareksaidee.newyorkgo.hiking.HikingAdapter;
 
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingViewHolder> {
 
     ArrayList<Hiking> h;
     private Context mContext;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mBookmarksDatabaseReferenceFull;
+    private DatabaseReference mBookmarksDatabaseReferencePart;
+    private FirebaseAuth mFirebaseAuth;
 
     HikingAdapter(@NonNull Context context, ArrayList<Hiking> h) {
         mContext = context;
         this.h = h;
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mBookmarksDatabaseReferenceFull = mFirebaseDatabase.getReference();
+        mBookmarksDatabaseReferencePart = mFirebaseDatabase.getReference();
+        mFirebaseAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -33,7 +50,7 @@ public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingView
 
     @Override
     public void onBindViewHolder(HikingViewHolder holder, int position) {
-        Hiking hiking = h.get(position);
+        final Hiking hiking = h.get(position);
         holder.name.setText(hiking.getName());
         holder.location.setText(hiking.getLocation());
         holder.parkName.setText(hiking.getParkName());
@@ -44,6 +61,31 @@ public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingView
         holder.limitedAccess.setText(hiking.getLimitedAccess());
         holder.lat.setText(hiking.getLat());
         holder.lon.setText(hiking.getLon());
+
+        holder.bookmarkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mFirebaseAuth.getCurrentUser() != null) {
+                    String key = (new Random().nextInt(100000000)) + "";
+                    mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
+                            .push().setValue(h);
+                    Bookmark bookmark = new Bookmark(hiking.getName(), key, "basketballcourt");
+                    mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
+                            .push().setValue(bookmark);
+                    Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(mContext, "Not logged in", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        holder.mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ShowAddressActivity.class);
+                intent.putExtra("address", hiking.getLocation());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -67,6 +109,8 @@ public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingView
         TextView limitedAccess;
         TextView lat;
         TextView lon;
+        Button mapButton;
+        Button bookmarkButton;
 
         HikingViewHolder(View view) {
             super(view);
@@ -80,6 +124,8 @@ public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingView
             limitedAccess = (TextView) view.findViewById(R.id.limitedAccess);
             lat = (TextView) view.findViewById(R.id.lat);
             lon = (TextView) view.findViewById(R.id.longitude);
+            mapButton = (Button) view.findViewById(R.id.map);
+            bookmarkButton = (Button) view.findViewById(R.id.bookmark);
         }
     }
 }

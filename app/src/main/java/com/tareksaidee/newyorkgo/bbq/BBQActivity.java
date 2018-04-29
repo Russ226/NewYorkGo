@@ -34,6 +34,5 @@ public class BBQActivity extends AppCompatActivity {
         bbqAdapter = new BBQAdapter(this, bbqs);
         bbqsView.setAdapter(bbqAdapter);
         bbqsView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-
     }
 }

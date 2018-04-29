@@ -1,29 +1,46 @@
 package com.tareksaidee.newyorkgo.iceskating;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.tareksaidee.newyorkgo.DTO.Bookmark;
 import com.tareksaidee.newyorkgo.DTO.IceSkating;
 import com.tareksaidee.newyorkgo.R;
+import com.tareksaidee.newyorkgo.ShowAddressActivity;
 import com.tareksaidee.newyorkgo.iceskating.IceSkatingActivity;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.IceSkatingViewHolder> {
-    //ArrayList<BBQ> bbqs;
+
     ArrayList<IceSkating> I;
     private Context mContext;
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mBookmarksDatabaseReferenceFull;
+    private DatabaseReference mBookmarksDatabaseReferencePart;
+    private FirebaseAuth mFirebaseAuth;
 
     IceSkatingAdapter(@NonNull Context context, ArrayList<IceSkating> I) {
         mContext = context;
         this.I = I;
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mBookmarksDatabaseReferenceFull = mFirebaseDatabase.getReference();
+        mBookmarksDatabaseReferencePart = mFirebaseDatabase.getReference();
+        mFirebaseAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -34,8 +51,7 @@ public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.Ic
 
     @Override
     public void onBindViewHolder(IceSkatingViewHolder holder, int position) {
-        IceSkating IS = I.get(position);
-
+        final IceSkating IS = I.get(position);
         holder.name.setText(IS.getName());
         holder.location.setText(IS.getLocation());
         holder.phone.setText(IS.getPhone());
@@ -56,6 +72,31 @@ public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.Ic
         holder.holidayPublicSkatingHours.setText(IS.getHolidayPublicSkatingHours());
         holder.programming.setText(IS.getProgramming());
         holder.notes.setText(IS.getNotes());
+
+        holder.bookmarkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mFirebaseAuth.getCurrentUser() != null) {
+                    String key = (new Random().nextInt(100000000)) + "";
+                    mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
+                            .push().setValue(IS);
+                    Bookmark bookmark = new Bookmark(IS.getName(), key, "basketballcourt");
+                    mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
+                            .push().setValue(bookmark);
+                    Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(mContext, "Not logged in", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        holder.mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ShowAddressActivity.class);
+                intent.putExtra("address", IS.getLocation());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -88,6 +129,8 @@ public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.Ic
         TextView holidayPublicSkatingHours;
         TextView programming;
         TextView notes;
+        Button mapButton;
+        Button bookmarkButton;
 
         IceSkatingViewHolder(View view) {
             super(view);
@@ -111,6 +154,8 @@ public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.Ic
             holidayPublicSkatingHours = (TextView) view.findViewById(R.id.holidayHours);
             programming = (TextView) view.findViewById(R.id.programming);
             notes = (TextView) view.findViewById(R.id.notes);
+            mapButton = (Button) view.findViewById(R.id.map);
+            bookmarkButton = (Button) view.findViewById(R.id.bookmark);
         }
     }
 }
