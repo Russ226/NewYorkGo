@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">New York Go</string>
+    <string name="app_name">NYGO</string>
     <string name="title_activity_show_address">Map</string>
 </resources>
