@@ -80,7 +80,7 @@ public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.Ic
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(IS);
-                    Bookmark bookmark = new Bookmark(IS.getName(), key, "basketballcourt");
+                    Bookmark bookmark = new Bookmark(IS.getName(), key, "iceskating");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();
