@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by russ on 4/27/18.
  */
 
-public class NaturePreserves {
+public class NaturePreserves extends Recreation{
     @SerializedName("ParkID")
     private String parkId;
 
@@ -20,7 +20,7 @@ public class NaturePreserves {
     private String borough;
 
     @SerializedName("Acres")
-    private double acres;
+    private String acres;
 
     @SerializedName("Directions")
     private String directions;
@@ -31,7 +31,7 @@ public class NaturePreserves {
     @SerializedName("HabitatType")
     private String habitatType;
 
-    public NaturePreserves(String parkId, String parkName, String sanctuaryName, String borough, double acres, String directions, String description, String habitatType) {
+    public NaturePreserves(String parkId, String parkName, String sanctuaryName, String borough, String acres, String directions, String description, String habitatType) {
         this.parkId = parkId;
         this.parkName = parkName;
         this.sanctuaryName = sanctuaryName;
@@ -50,8 +50,28 @@ public class NaturePreserves {
         this.parkId = parkId;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public String getLocation() {
+        return null;
+    }
+
     public String getParkName() {
         return parkName;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
+    }
+
+    @Override
+    public String getAddress1() {
+        return null;
     }
 
     public void setParkName(String parkName) {
@@ -74,11 +94,11 @@ public class NaturePreserves {
         this.borough = borough;
     }
 
-    public double getAcres() {
+    public String getAcres() {
         return acres;
     }
 
-    public void setAcres(double acres) {
+    public void setAcres(String acres) {
         this.acres = acres;
     }
 

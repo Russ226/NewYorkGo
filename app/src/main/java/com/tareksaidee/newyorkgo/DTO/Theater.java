@@ -2,7 +2,7 @@ package com.tareksaidee.newyorkgo.DTO;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Theater {
+public class Theater extends Recreation{
         @SerializedName("the_geom")
         private transient Geom the_geom;
 
@@ -25,9 +25,9 @@ public class Theater {
         private String city;
 
         @SerializedName("zip")
-        private double zipCode;
+        private String zipCode;
 
-        public Theater(Geom the_geom, String name, String tel, String url, String address1, String address2, String city, double zipCode) {
+        public Theater(Geom the_geom, String name, String tel, String url, String address1, String address2, String city, String zipCode) {
             this.the_geom = the_geom;
             this.name = name;
             this.tel = tel;
@@ -50,7 +50,22 @@ public class Theater {
             return name;
         }
 
-        public void setName(String name) {
+    @Override
+    public String getLocation() {
+        return null;
+    }
+
+    @Override
+    public String getParkName() {
+        return null;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
+    }
+
+    public void setName(String name) {
             this.name = name;
         }
 
@@ -94,11 +109,11 @@ public class Theater {
             this.city = city;
         }
 
-        public double getZipCode() {
+        public String getZipCode() {
             return zipCode;
         }
 
-        public void setZipCode(double zipCode) {
+        public void setZipCode(String zipCode) {
             this.zipCode = zipCode;
         }
 }

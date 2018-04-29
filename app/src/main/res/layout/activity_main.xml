@@ -37,34 +37,40 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/round_button"
             android:onClick="handleButtons"
             android:text="Start"
-            android:textColor="#FAFAFA"
-            android:textSize="32dp" />
+            android:textColor="#FFFFFF"
+            android:textSize="32dp"
+            android:shadowColor="#111111"
+            android:shadowRadius="2"/>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/round_button"
             android:onClick="handleButtons"
             android:text="Bookmark"
-            android:textColor="#FAFAFA" />
+            android:textColor="#FFFFFF"
+            android:shadowColor="#111111"
+            android:shadowRadius="2"/>
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/round_button"
             android:onClick="handleButtons"
             android:text="About"
-            android:textColor="#FAFAFA" />
+            android:textColor="#FFFFFF"
+            android:shadowColor="#111111"
+            android:shadowRadius="4"/>
 
 
     </LinearLayout>

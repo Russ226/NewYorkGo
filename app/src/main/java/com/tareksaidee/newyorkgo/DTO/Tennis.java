@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by tarek on 4/27/2018.
  */
 
-public class Tennis {
+public class Tennis extends Recreation{
 
     @SerializedName("Prop_Name")
     private String propName;
@@ -73,6 +73,21 @@ public class Tennis {
 
     public String getLocation() {
         return location;
+    }
+
+    @Override
+    public String getParkName() {
+        return null;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
+    }
+
+    @Override
+    public String getAddress1() {
+        return null;
     }
 
     public void setLocation(String location) {

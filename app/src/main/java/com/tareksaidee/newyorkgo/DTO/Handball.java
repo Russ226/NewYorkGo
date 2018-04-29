@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by russ on 4/27/18.
  */
 
-public class Handball {
+public class Handball extends Recreation{
     @SerializedName("prop_ID")
     private String propId;
 
@@ -44,6 +44,21 @@ public class Handball {
 
     public String getLocation() {
         return location;
+    }
+
+    @Override
+    public String getParkName() {
+        return null;
+    }
+
+    @Override
+    public String getAddress() {
+        return null;
+    }
+
+    @Override
+    public String getAddress1() {
+        return null;
     }
 
     public void setLocation(String location) {
