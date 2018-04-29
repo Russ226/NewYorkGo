@@ -15,11 +15,8 @@ import java.util.ArrayList;
 
 public class HandballActivity extends AppCompatActivity {
 
-    //private ArrayList<BBQ> bbqs;
     private ArrayList<Handball> H;
-    //private RecyclerView bbqsView;
     private RecyclerView handballView;
-    //private BBQAdapter bbqAdapter;
     private HandballAdapter handballAdapter;
     private JsonParser parser;
 

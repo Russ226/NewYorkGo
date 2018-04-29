@@ -16,7 +16,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.IceSkatingViewHolder>{
+public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.IceSkatingViewHolder> {
     //ArrayList<BBQ> bbqs;
     ArrayList<IceSkating> I;
     private Context mContext;
@@ -27,8 +27,8 @@ public class IceSkatingAdapter extends RecyclerView.Adapter<IceSkatingAdapter.Ic
     }
 
     @Override
-    public IceSkatingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.bbq_card, parent, false);
+    public IceSkatingAdapter.IceSkatingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.ice_skating_card, parent, false);
         return new IceSkatingViewHolder(view);
     }
 

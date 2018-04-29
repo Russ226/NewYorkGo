@@ -19,7 +19,7 @@ public class IceSkatingActivity extends AppCompatActivity {
     //private RecyclerView bbqsView;
     private RecyclerView iceSkatingView;
     //private BBQAdapter bbqAdapter;
-    private IceSkating iceSkatingAdapter;
+    private IceSkatingAdapter iceSkatingAdapter;
     private JsonParser parser;
 
     @Override
@@ -33,7 +33,7 @@ public class IceSkatingActivity extends AppCompatActivity {
             Log.e("IceSkating", e.getMessage());
         }
         iceSkatingView = findViewById(R.id.iceskatingRecyclerView);
-        iceSkatingAdapter = new iceSkatingAdapter(this, I);
+        iceSkatingAdapter = new IceSkatingAdapter(this, I);
         iceSkatingView.setAdapter(iceSkatingAdapter);
         iceSkatingView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }

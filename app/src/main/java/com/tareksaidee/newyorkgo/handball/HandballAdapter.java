@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.tareksaidee.newyorkgo.DTO.BBQ;
 import com.tareksaidee.newyorkgo.DTO.Handball;
+import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.bbq.BBQAdapter;
 import com.tareksaidee.newyorkgo.handball.HandballActivity;
 
@@ -17,19 +18,17 @@ import java.util.ArrayList;
 
 public class HandballAdapter extends RecyclerView.Adapter<HandballAdapter.HandballViewHolder>{
 
-    //ArrayList<BBQ> bbqs;
     ArrayList<Handball> H;
     private Context mContext;
 
     HandballAdapter(@NonNull Context context, ArrayList<Handball> H) {
         mContext = context;
         this.H = H;
-
     }
 
     @Override
     public HandballViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.bbq_card, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.handball_card, parent, false);
         return new HandballViewHolder(view);
     }
 
@@ -61,7 +60,7 @@ public class HandballAdapter extends RecyclerView.Adapter<HandballAdapter.Handba
             super(view);
             name = (TextView) view.findViewById(R.id.name);
             location = (TextView) view.findViewById(R.id.location);
-            numCourts = (TextView) view.findViewById(R.id.numCourts);
+            numCourts = (TextView) view.findViewById(R.id.courts);
         }
     }
 }

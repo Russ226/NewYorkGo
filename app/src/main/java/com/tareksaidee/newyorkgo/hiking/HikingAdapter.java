@@ -27,7 +27,7 @@ public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingView
 
     @Override
     public HikingAdapter.HikingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.basketball_court_card, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.hiking_card, parent, false);
         return new HikingViewHolder(view);
     }
 
