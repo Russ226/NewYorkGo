@@ -59,7 +59,7 @@ public class ParkAdapter extends RecyclerView.Adapter<ParkAdapter.ParkViewHolder
                     String key = (new Random().nextInt(100000000)) + "";
                     mBookmarksDatabaseReferenceFull.child(mFirebaseAuth.getCurrentUser().getUid() + "/full/" + key)
                             .push().setValue(p);
-                    Bookmark bookmark = new Bookmark(p.getName(), key, "park");
+                    Bookmark bookmark = new Bookmark(p.getName(), key, "park","350 5th Ave");
                     mBookmarksDatabaseReferencePart.child(mFirebaseAuth.getCurrentUser().getUid() + "/part/")
                             .push().setValue(bookmark);
                     Toast.makeText(mContext, "Bookmarked", Toast.LENGTH_SHORT).show();

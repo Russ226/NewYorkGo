@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 public class ShowAddressActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -51,6 +52,8 @@ public class ShowAddressActivity extends FragmentActivity implements OnMapReadyC
         Geocoder geocoder = new Geocoder(this, new Locale("New York City"));
         List<Address> addressList = null;
         try {
+            if (address == null)
+                address = new Random().nextInt(300) + " 5th Ave";
             addressList = new ArrayList(geocoder.getFromLocationName(address, 1));
 
         } catch (IOException e) {
