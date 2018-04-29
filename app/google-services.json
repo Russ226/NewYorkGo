@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "420150769129",
+    "firebase_url": "https://newyorkgo-b23b9.firebaseio.com",
+    "project_id": "newyorkgo-b23b9",
+    "storage_bucket": "newyorkgo-b23b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420150769129:android:8865f6b938492661",
+        "android_client_info": {
+          "package_name": "com.tareksaidee.newyorkgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420150769129-k6nph6nvac2n05m95uvbluhctk1fs6q9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tareksaidee.newyorkgo",
+            "certificate_hash": "64c77e6dfab501a99fc1de3ba195b3438adddafd"
+          }
+        },
+        {
+          "client_id": "420150769129-q3b51gj55npg776madq3etgf69boa1k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC2DwMAuflCYt_Q_haS0kyZLmJM9Xu7V8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420150769129-q3b51gj55npg776madq3etgf69boa1k8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
