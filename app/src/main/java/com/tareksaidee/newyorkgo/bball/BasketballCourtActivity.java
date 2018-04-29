@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.BasketballCourt;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
@@ -25,10 +26,16 @@ public class BasketballCourtActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basketball_court);
         parser = new JsonParser();
-        try {
-            bball = parser.getBasketballCourt(getAssets());
-        } catch (Exception e) {
-            Log.e("BasketballCourt", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            bball = new ArrayList<>();
+            bball.add(new Gson().fromJson(getIntent().getStringExtra("object"), BasketballCourt.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                bball = parser.getBasketballCourt(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
 
         bballView = findViewById(R.id.basketballCourtRecyclerView);

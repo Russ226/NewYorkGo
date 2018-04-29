@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.BBQ;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
@@ -26,10 +27,16 @@ public class BBQActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bbq);
         parser = new JsonParser();
-        try {
-            bbqs = parser.getBBQ(getAssets());
-        } catch (Exception e) {
-            Log.e("BBQ", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            bbqs = new ArrayList<>();
+            bbqs.add(new Gson().fromJson(getIntent().getStringExtra("object"), BBQ.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                bbqs = parser.getBBQ(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         bbqsView = findViewById(R.id.bbqRecyclerView);
         try {

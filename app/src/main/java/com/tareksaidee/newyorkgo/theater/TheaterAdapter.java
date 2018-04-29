@@ -79,6 +79,9 @@ public class TheaterAdapter extends RecyclerView.Adapter<TheaterAdapter.TheaterV
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

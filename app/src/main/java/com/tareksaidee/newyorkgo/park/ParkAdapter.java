@@ -18,7 +18,6 @@ import com.tareksaidee.newyorkgo.DTO.Bookmark;
 import com.tareksaidee.newyorkgo.DTO.Park;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.ShowAddressActivity;
-import com.tareksaidee.newyorkgo.museum.MuseumAdapter;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -77,6 +76,9 @@ public class ParkAdapter extends RecyclerView.Adapter<ParkAdapter.ParkViewHolder
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

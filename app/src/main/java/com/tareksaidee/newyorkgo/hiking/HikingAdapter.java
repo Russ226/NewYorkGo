@@ -84,6 +84,9 @@ public class HikingAdapter extends RecyclerView.Adapter<HikingAdapter.HikingView
                 mContext.startActivity(intent);
             }
         });
+        if(getItemCount()==1){
+            holder.bookmarkButton.setVisibility(View.GONE);
+        }
     }
 
     @Override

@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.IndoorSwimmingPool;
 import com.tareksaidee.newyorkgo.R;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
@@ -27,10 +28,16 @@ public class IndoorSwimmingPoolActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indoor_swimming_pool);
         parser = new JsonParser();
-        try {
-            ISP = parser.getIndoorSwimmingPool(getAssets());
-        } catch (Exception e) {
-            Log.e("Indoor Swimming Pool", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            ISP = new ArrayList<>();
+            ISP.add(new Gson().fromJson(getIntent().getStringExtra("object"), IndoorSwimmingPool.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                ISP = parser.getIndoorSwimmingPool(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         indoorSwimmingPoolView = findViewById(R.id.indoorSwimmingPoolRecyclerView);
         ISPAdapter = new IndoorSwimmingPoolAdapter(this, ISP);

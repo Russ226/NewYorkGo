@@ -1,14 +1,14 @@
 package com.tareksaidee.newyorkgo.naturepreserves;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.NaturePreserves;
 import com.tareksaidee.newyorkgo.R;
-import com.tareksaidee.newyorkgo.artgallery.ArtGalleryAdapter;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;
@@ -28,10 +28,16 @@ public class NaturePreservesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nature_preserves);
         parser = new JsonParser();
-        try {
-            N = parser.getNaturePreserves(getAssets());
-        } catch (Exception e) {
-            Log.e("Nature Preserves", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            N = new ArrayList<>();
+            N.add(new Gson().fromJson(getIntent().getStringExtra("object"), NaturePreserves.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                N = parser.getNaturePreserves(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         naturePreservesView = findViewById(R.id.naturePreservesActivity);
         naturePreservesAdapter = new NaturePreservesAdapter(this, N);

@@ -6,9 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.tareksaidee.newyorkgo.DTO.Handball;
 import com.tareksaidee.newyorkgo.R;
-import com.tareksaidee.newyorkgo.handball.HandballAdapter;
 import com.tareksaidee.newyorkgo.parser.JsonParser;
 
 import java.util.ArrayList;
@@ -26,10 +26,16 @@ public class HandballActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handball);
         parser = new JsonParser();
-        try {
-            H = parser.getHandball(getAssets());
-        } catch (Exception e) {
-            Log.e("Handball", e.getMessage());
+        if (getIntent().getStringExtra("object") != null) {
+            H = new ArrayList<>();
+            H.add(new Gson().fromJson(getIntent().getStringExtra("object"), Handball.class));
+        } else {
+            parser = new JsonParser();
+            try {
+                H = parser.getHandball(getAssets());
+            } catch (Exception e) {
+                Log.e("Art gallery", e.getMessage());
+            }
         }
         handballView = findViewById(R.id.handballRecyclerView);
         handballAdapter = new HandballAdapter(this, H);
