@@ -1,6 +1,7 @@
 package com.tareksaidee.newyorkgo.bbq;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.tareksaidee.newyorkgo.DTO.BBQ;
 import com.tareksaidee.newyorkgo.R;
+import com.tareksaidee.newyorkgo.ShowAddressActivity;
 
 import java.util.ArrayList;
 
@@ -17,7 +19,7 @@ import java.util.ArrayList;
  * Created by tarek on 4/28/2018.
  */
 
-public class BBQAdapter extends RecyclerView.Adapter<BBQAdapter.BBQViewHolder> {
+public class BBQAdapter extends RecyclerView.Adapter<BBQAdapter.BBQViewHolder> implements View.OnClickListener{
 
     ArrayList<BBQ> bbqs;
     private Context mContext;
@@ -60,6 +62,13 @@ public class BBQAdapter extends RecyclerView.Adapter<BBQAdapter.BBQViewHolder> {
             name = (TextView) view.findViewById(R.id.name);
             location = (TextView) view.findViewById(R.id.location);
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(mContext, ShowAddressActivity.class);
+        intent.putExtra("address", ((TextView) view.findViewById(R.id.location)).getText().toString());
+        mContext.startActivity(intent);
     }
 
 

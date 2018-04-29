@@ -1,6 +1,7 @@
 package com.tareksaidee.newyorkgo.eateries;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,10 +11,11 @@ import android.widget.TextView;
 
 import com.tareksaidee.newyorkgo.DTO.Eateries;
 import com.tareksaidee.newyorkgo.R;
+import com.tareksaidee.newyorkgo.ShowAddressActivity;
 
 import java.util.ArrayList;
 
-public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.EateriesViewHolder> {
+public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.EateriesViewHolder> implements View.OnClickListener {
 
     ArrayList<Eateries> e;
     private Context mContext;
@@ -61,8 +63,9 @@ public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.Eateri
 
         EateriesViewHolder(View view) {
             super(view);
+            parkID = (TextView) view.findViewById(R.id.parkID);
             name = (TextView) view.findViewById(R.id.name);
-            parkID = (TextView) view.findViewById(R.id.location);
+            location = (TextView) view.findViewById(R.id.location);
             startDate = (TextView) view.findViewById(R.id.startDate);
             endDate = (TextView) view.findViewById(R.id.endDate);
             description = (TextView) view.findViewById(R.id.description);
@@ -71,5 +74,12 @@ public class EateriesAdapter extends RecyclerView.Adapter<EateriesAdapter.Eateri
             website = (TextView) view.findViewById(R.id.website);
             typeName = (TextView) view.findViewById(R.id.typeName);
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(mContext, ShowAddressActivity.class);
+        intent.putExtra("address", ((TextView) view.findViewById(R.id.location)).getText().toString());
+        mContext.startActivity(intent);
     }
 }
