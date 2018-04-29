@@ -55,7 +55,7 @@
         <activity android:name=".tennis.TennisActivity" />
         <activity android:name=".theater.TheaterActivity" />
         <activity android:name=".zooaq.ZooAqActivity" />
-
+        <activity android:name=".About" />
     </application>
 
 </manifest>
