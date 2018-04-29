@@ -60,6 +60,24 @@
             android:layout_height="wrap_content"
             android:text="Zip Code" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Map"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bookmark"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
